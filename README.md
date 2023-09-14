@@ -1,7 +1,7 @@
 # Straven Streaming Platform
 
 ## Overview
-Straven is a modern streaming platform that allows users to browse, stream, and enjoy a vast selection of movies and TV series. With a user-friendly interface and a wide variety of content, Straven aims to provide an immersive entertainment experience. Users can explore media content by category, and enjoy an engaging viewing experience.
+Straven is a *Modern Streaming Platform* that allows users to Browse, Stream, and Enjoy a vast selection of Movies and TV Series. With a *user-friendly* interface and a wide variety of content, Straven aims to provide an *immersive* entertainment experience. Users can explore media content by genre, and enjoy an *engaging* viewing experience.
 
 ## Technologies
 #### Straven is built using the following technologies:
