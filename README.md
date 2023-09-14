@@ -31,7 +31,7 @@ Stream content in HD and 4K with adaptive streaming for the best possible qualit
 * Clone the repository to your local machine
 * Navigate to the project directory
 * Run `npm install` to install the necessary dependencies
-* Start the development server with npm run dev
+* Start the development server with `npm run dev`
 
 ## Contributing
 Contributions to Straven are welcome! If you'd like to contribute to this project, please follow these steps:
