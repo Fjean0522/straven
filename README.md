@@ -6,14 +6,24 @@ Straven is a modern streaming platform that allows users to browse, stream, and 
 ## Technologies
 #### Straven is built using the following technologies:
 
-* **React JS**: 
-A popular JavaScript library for building user interfaces
+* **React JS**:  
+A popular JavaScript library for building user interfaces.
 
-* **Tailwind CSS**: 
-A utility-first CSS framework for designing clean and responsive UIs
+* **Tailwind CSS**:  
+A utility-first CSS framework for designing clean and responsive UIs.
 
-* **TypeScript**: 
-A statically typed superset of JavaScript that helps catch errors at compile time
+* **TypeScript**:  
+A statically typed superset of JavaScript that helps catch errors at compile time.
+
+## Features
+* **Extensive Content Library**:  
+Access a vast collection of movies and TV series spanning various genres.
+
+* **Search and Filters**:  
+Powerful search functionality with filters for genres.
+
+* **High-Quality Streaming**:  
+Stream content in HD and 4K with adaptive streaming for the best possible quality.
 
 ## Getting Started
 #### To get started with Straven locally, follow these steps:
