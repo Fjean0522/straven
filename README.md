@@ -1,4 +1,3 @@
-# Straven
 ![Straven Logo](./logo_readme.png)
 
 ## Overview
