@@ -1,10 +1,12 @@
-import logo from '../assets/straven_logo.png'
 import menu from '../assets/hamburger_menu.png'
 import search from '../assets/search.png'
 import settings from '../assets/settings.png'
 
 
 const Header = () => {
+
+
+  
   return (
     <>
       <nav className='flex justify-between items-center p-5'>
