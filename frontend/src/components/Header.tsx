@@ -15,10 +15,13 @@ const Header = () => {
             <span className='text-blue-600'>Str</span>
             aven
           </h1>
+        </div>
+
+        <div className='lg:hidden'>
           <img 
             src={menu} 
             alt='Menu'
-            className='w-8 h-8 lg:hidden'
+            className='w-8 h-8'
           />
         </div>
 
@@ -27,7 +30,7 @@ const Header = () => {
           <h2>Series</h2>
         </div>
 
-        <div className='flex items-center gap-2' >
+        <div className='hidden lg:flex lg:items-center lg:gap-2' >
           <img
             src={search} 
             alt='Search Icon'
