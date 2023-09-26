@@ -15,7 +15,7 @@ const Hero = () => {
     >
       <div className='flex flex-col justify-center h-full lg:ml-3 px-6'>
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
-          <h2 className='text-white font-bold'>Detective Reacher</h2>
+          <h2 className='text-white text-xl font-bold lg:text-2xl'>Detective Reacher</h2>
           <p className='text-white mb-3'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Ut a sapien sed ex feugiat faucibus nec quis lectus. 
