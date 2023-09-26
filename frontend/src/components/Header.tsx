@@ -9,7 +9,7 @@ const Header = () => {
   
   return (
     <>
-      <nav className='flex justify-between items-center p-5'>
+      <nav className='flex justify-between items-center p-5 lg:px-14'>
         <div className='flex items-center gap-5'>
           <h1 className='text-white text-3xl font-bold'>
             <span className='text-blue-600'>Str</span>
@@ -18,7 +18,7 @@ const Header = () => {
           <img 
             src={menu} 
             alt='Menu'
-            className='w-8 h-8'
+            className='w-8 h-8 lg:hidden'
           />
         </div>
 
