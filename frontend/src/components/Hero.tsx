@@ -2,7 +2,14 @@ import play_btn from '../assets/play_btn.png'
 import movieThumbnail from '../assets/detective_reacher_placeholder.png'
 
 const Hero = () => {
-  const heroStyles = {
+  type bgImage = {
+    backgroundImage: string,
+    backgroundSize: string,
+    backgroundPosition: string,
+    backgroundRepeat: string
+  }
+  
+  const heroImage: bgImage = {
     backgroundImage: `url(${movieThumbnail})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -12,7 +19,7 @@ const Hero = () => {
   return (
     <div 
       className='p-6 h-72 md:h-96' 
-      style={heroStyles}
+      style={heroImage}
     >
       <div className='flex flex-col justify-center min-h-full min-w-full bg-black bg-opacity-40 rounded-xl lg:ml-3 px-6'>
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
