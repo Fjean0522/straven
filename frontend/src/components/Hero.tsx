@@ -13,7 +13,7 @@ const Hero = () => {
     <div className='p-6 h-72 md:h-96' 
          style={heroStyles}
     >
-      <div className='flex flex-col justify-center h-full lg:ml-3'>
+      <div className='flex flex-col justify-center h-full lg:ml-3 px-6'>
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
           <h2 className='text-white font-bold'>Detective Reacher</h2>
           <p className='text-white mb-3'>
