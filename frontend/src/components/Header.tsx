@@ -9,7 +9,7 @@ const Header = () => {
   
   return (
     <>
-      <nav className='flex justify-between items-center p-5 lg:px-14'>
+      <nav className='flex justify-between items-center p-5 md:px-10 lg:px-14'>
         <div className='flex items-center gap-5'>
           <h1 className='text-white text-3xl font-bold'>
             <span className='text-blue-600'>Str</span>
@@ -22,7 +22,12 @@ const Header = () => {
           />
         </div>
 
-        <div className='flex items-center gap-2'>
+        <div className='hidden lg:flex lg:gap-20 lg:text-white lg:text-xl lg:font-bold'>
+          <h2>Movies</h2>
+          <h2>Series</h2>
+        </div>
+
+        <div className='flex items-center gap-2' >
           <img
             src={search} 
             alt='Search Icon'
