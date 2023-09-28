@@ -25,7 +25,7 @@ const Header = () => {
           />
         </div>
 
-        <div className='hidden lg:flex lg:gap-20 lg:text-white lg:text-xl lg:font-bold'>
+        <div className='hidden lg:flex gap-20 text-white text-xl font-bold'>
           <h2 className='hover:text-blue-600 cursor-pointer'>Movies</h2>
           <h2 className='hover:text-blue-600 cursor-pointer'>Series</h2>
         </div>
