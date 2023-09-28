@@ -1,5 +1,6 @@
 import play_btn from '../assets/play_btn.png'
 import movieThumbnail from '../assets/detective_reacher_placeholder.png'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   type bgImage = {
@@ -31,14 +32,16 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className='bg-white flex items-center justify-center gap-2 text-lg font-bold w-28 p-2 rounded-xl cursor-pointer hover:scale-105'>
+        <Link
+          to='/play'
+          className='bg-white flex items-center justify-center gap-2 text-lg font-bold w-28 p-2 rounded-xl cursor-pointer hover:scale-105'>
           <img
             src={play_btn} 
             alt="Play Button" 
             className='w-6'
           />
           Play
-        </div>
+        </Link>
       </div>
     </div>
   )
