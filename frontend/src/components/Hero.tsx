@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className='bg-white flex items-center justify-center gap-2 text-lg font-bold w-28 p-2 rounded-xl'>
+        <div className='bg-white flex items-center justify-center gap-2 text-lg font-bold w-28 p-2 rounded-xl cursor-pointer hover:scale-105'>
           <img
             src={play_btn} 
             alt="Play Button" 
