@@ -3,7 +3,7 @@ import MediaPlayer from '../MediaPlayer'
 
 const Play: React.FC = () => {
 
-  const mediaUrl = '/src/assets/the_nun_2.mp4'
+  const mediaUrl = ''
 
   console.log(`Media is displaying with url: ${mediaUrl}`)
 
