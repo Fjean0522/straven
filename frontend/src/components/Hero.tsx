@@ -3,14 +3,14 @@ import movieThumbnail from '../assets/detective_reacher_placeholder.png'
 import { Link } from 'react-router-dom'
 
 const Hero = () => {
-  type bgImage = {
+  type BgImage = {
     backgroundImage: string,
     backgroundSize: string,
     backgroundPosition: string,
     backgroundRepeat: string
   }
   
-  const heroImage: bgImage = {
+  const heroImage: BgImage = {
     backgroundImage: `url(${movieThumbnail})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',

@@ -1,9 +1,11 @@
+import ReactPlayer from "react-player"
 
+type media
 
 const MediaPlayer = () => {
   return (
     <>
-
+      
     </>
   )
 }
