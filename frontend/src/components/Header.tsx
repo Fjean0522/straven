@@ -28,12 +28,12 @@ const Header = () => {
           />
         </div>
 
-        <div className='hidden lg:flex gap-20 text-white text-xl font-bold'>
+        <div className='gap-20 text-white text-xl font-bold hidden lg:flex'>
           <h2 className='hover:text-blue-600 cursor-pointer'>Movies</h2>
           <h2 className='hover:text-blue-600 cursor-pointer'>Series</h2>
         </div>
 
-        <div className='hidden lg:flex lg:items-center lg:gap-2' >
+        <div className='items-center gap-2 hidden lg:flex' >
           <img
             src={search} 
             alt='Search Icon'
