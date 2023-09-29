@@ -37,12 +37,12 @@ const Header = () => {
           <img
             src={search} 
             alt='Search Icon'
-            className='w-10 h-10'
+            className='w-10 h-10 cursor-pointer'
           />
           <img 
             src={settings} 
             alt='Settings'
-            className='w-10 h-10'
+            className='w-10 h-10 cursor-pointer'
           />
         </div>
       </nav>
