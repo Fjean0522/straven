@@ -4,14 +4,18 @@ import search from '../assets/search.png'
 import settings from '../assets/settings.png'
 import { Link } from 'react-router-dom'
 
+type BgHeader = {
+  bgOpacityClass?: string
+}
 
-const Header: React.FC = () => {
 
+const Header: React.FC<BgHeader> = ({ bgOpacityClass }) => {
 
   
   return (
     <>
-      <nav className='sticky top-0 z-50 bg-black bg-opacity-50 flex justify-between items-center p-5 md:px-10 lg:px-14'>
+      <nav 
+        className={`sticky top-0 z-50 bg-black ${bgOpacityClass} flex justify-between items-center p-5 md:px-10 lg:px-14 `}>
         <div className='flex items-center gap-5'>
           <Link to='/'>
             <h1 className='text-white text-3xl font-bold cursor-pointer'>

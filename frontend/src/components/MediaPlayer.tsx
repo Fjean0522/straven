@@ -8,7 +8,7 @@ type MediaPlayerProp = {
 const MediaPlayer: React.FC<MediaPlayerProp> = ({ url }) => {
 
   return (
-    <div className="bg- h-screen">
+    <div className="bg-black h-screen">
       <div className="h-fit pb-3">
         <ReactPlayer
           controls
@@ -18,9 +18,9 @@ const MediaPlayer: React.FC<MediaPlayerProp> = ({ url }) => {
         />
       </div>
 
-      <div className="text-black flex gap-3">
-        <h2 className="text-2xl font-semibold">Prism</h2>
-        <p>PG-13</p>
+      <div className="text-white flex gap-3">
+        <h2 className="text-2xl font-semibold">The Nun 2</h2>
+        <p>R</p>
         <p>1h 37m</p>
       </div>
     </div>

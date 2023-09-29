@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
-      <Header />
+      <Header bgOpacityClass="bg-opacity-50" />
       <Hero />
       <CategorySelection />
       <ContentDisplay />
