@@ -14,6 +14,7 @@ const ContentDisplay = () => {
         <img 
           src={movie_1} 
           alt="Movie Thumbnail" 
+          className='hover:border hover:border-blue-400'
         />
         <h1>Prism</h1>
       </Link>
@@ -23,7 +24,8 @@ const ContentDisplay = () => {
         className='flex flex-col items-center gap-2 hover:scale-105 cursor-pointer'>
         <img 
           src={movie_2} 
-          alt="Movie Thumbnail" 
+          alt="Movie Thumbnail"
+          className='hover:border hover:border-blue-400' 
         />
         <h1>Forever Abyss</h1>
       </Link>
@@ -33,7 +35,8 @@ const ContentDisplay = () => {
         className='flex flex-col items-center gap-2 hover:scale-105 cursor-pointer'>
         <img 
           src={movie_3} 
-          alt="Movie Thumbnail" 
+          alt="Movie Thumbnail"
+          className='hover:border hover:border-blue-400' 
         />
         <h1>The Haunting</h1>
       </Link>
