@@ -1,8 +1,9 @@
 import play_btn from '../assets/play_btn.png'
 import movieThumbnail from '../assets/detective_reacher_placeholder.png'
 import { Link } from 'react-router-dom'
+import React from 'react'
 
-const Hero = () => {
+const Hero: React.FC = () => {
   
   type BgImage = {
     backgroundImage: string,

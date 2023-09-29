@@ -1,7 +1,8 @@
+import React from "react"
 
 
 
-const CategorySelection = () => {
+const CategorySelection:React.FC = () => {
 
 
   

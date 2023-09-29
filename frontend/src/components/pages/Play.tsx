@@ -1,7 +1,8 @@
 import Header from "../Header"
 import MediaPlayer from '../MediaPlayer'
 
-const Play = () => {
+const Play: React.FC = () => {
+  
   return (
     <>
       <Header />

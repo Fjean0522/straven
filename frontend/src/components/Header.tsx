@@ -1,10 +1,11 @@
+import React from 'react'
 import menu from '../assets/hamburger_menu.png'
 import search from '../assets/search.png'
 import settings from '../assets/settings.png'
 import { Link } from 'react-router-dom'
 
 
-const Header = () => {
+const Header: React.FC = () => {
 
 
   

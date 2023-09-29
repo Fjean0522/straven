@@ -1,6 +1,9 @@
+import React from "react"
 
 
-const Episodes = () => {
+const Episodes: React.FC = () => {
+
+
   return (
     <>
 

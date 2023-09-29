@@ -1,9 +1,10 @@
+import React from 'react'
 import movie_1 from '../assets/movie_1.png'
 import movie_2 from '../assets/movie_2.png'
 import movie_3 from '../assets/movie_3.png' 
 import { Link } from 'react-router-dom'
 
-const ContentDisplay = () => {
+const ContentDisplay: React.FC = () => {
 
 
   return (
