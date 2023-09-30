@@ -2,7 +2,7 @@ import Header from "../Header"
 import Hero from "../Hero"
 import CategorySelection from "../CategorySelection"
 import ContentDisplay from "../ContentDisplay"
-import React from "react"
+
 
 const Home: React.FC = () => {
 
