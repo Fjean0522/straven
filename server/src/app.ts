@@ -1,16 +1,28 @@
-import mongoose from 'mongoose';
-import express from 'express';
+import mongoose, { Connection } from 'mongoose';
+import express, { Express } from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const app = express();
-const DB_URI = 'mongodb+srv://fjean0522:straven_user123@straven-db.qgu8tgi.mongodb.net/?retryWrites=true&w=majority';
-
-
-const connectToDb = async () => {
-    const connect = await mongoose.connect(DB_URI);
-    console.log(`Connected to the database`);
-}
-
-connectToDb();
+const app: Express = express();
+const port: number = 3000;
+const DB_URI: string = process.env.DB_URI || ''
 
 
-export default app;
+const connectToDb = async (): Promise<Connection | undefined> => {
+    try {
+        const connect = await mongoose.connect(DB_URI);
+        return connect.connection
+    } catch (error) {
+        console.log(error);
+        return undefined
+    }
+};
+
+(async () => {
+   try {
+    await connectToDb();
+    app.listen(port, () => console.log(`Connected to the database & Listening on port ${port}`));
+   } catch (error) {
+        console.log(error);
+   }  
+})()
