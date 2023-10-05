@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app: Express = express();
-const port: number = 3000;
+const port: string | number = process.env.PORT || 3000;
 const DB_URI: string = process.env.DB_URI || ''
 
 
