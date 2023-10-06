@@ -1,23 +1,14 @@
 import { Movie } from "../models/Movie";
-import { Request, Response } from "express";
+import movieData from "./movieData";
 
-
-const addMovies = async (req: Request, res: Response): Promise<void> => {    
+const addMovies = async (): Promise<void> => {    
     try {
-       const movies: Movie[] = req.body;
-       const newMovies = await Movie.insertMany(movies)
-       res.status(201).json(newMovies);
+        const newMovies = await Movie.insertMany(movieData);
+        console.log('Movie data successfully uploaded', newMovies);
 
     } catch (error) {
-        res.status(500).json({ error: 'Movie data upload failed' });
+        console.log(`Failed to upload movie data | Error: ${error}`);
     }
 };
 
 export default addMovies;
-
-
-/* try {
-  const insertedMovies = await Movie.insertMany(moviesToAdd);
-  console.log('Movies added successfully:', insertedMovies);
-} catch (error) {
-  console.error('Error adding movies:', error); */
