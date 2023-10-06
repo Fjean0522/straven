@@ -2,6 +2,16 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
+export type Movie = {
+    title: string,
+    description: string,
+    category: string,
+    duration: string,
+    imageUrl: string,
+    videoUrl: string
+};
+
+
 const movieSchema = new Schema({
     title: {
         type: String,
@@ -14,11 +24,6 @@ const movieSchema = new Schema({
     },
 
     category: {
-        type: String,
-        required: true,
-    },
-
-    rating: {
         type: String,
         required: true,
     },
