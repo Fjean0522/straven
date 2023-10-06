@@ -29,3 +29,6 @@ const connectToDb = async (): Promise<Connection | undefined> => {
         console.log(error);
    }  
 })()
+
+const db = mongoose.connection;
+export default db;
