@@ -7,13 +7,22 @@ Straven is a *Modern Streaming Platform* that allows users to Browse, Stream, an
 #### Straven is built using the following technologies:
 
 * **React JS**:  
-A popular JavaScript library for building user interfaces.
+A client side JavaScript library for building user interfaces.
 
 * **Tailwind CSS**:  
-A utility-first CSS framework for designing clean and responsive UIs.
+A utility-first CSS framework.
 
 * **TypeScript**:  
 A statically typed superset of JavaScript that helps catch errors at compile time.
+
+* **MongoDb**:  
+A NoSQL database management system that stores data in a flexible, document-based format.
+
+* **Express JS**:  
+A minimal Node js framework for building RESTful APIs.
+
+* **Node JS**:  
+A cross-platform JavaScript runtime environment.
 
 ## Features
 * **Extensive Content Library**:  
