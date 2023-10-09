@@ -1,186 +1,187 @@
 import { Movie } from "../models/Movie";
 
-const movieData: Movie[] = [
-  new Movie({
+const bulkMovieData: Movie[] = [
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  },
 
-  new Movie({
+  {
     title: '',
     description: '',
     category: '',
     duration: '',
     imageUrl: '',
     videoUrl: ''
-  }),
+  }
 ];
 
+const movieData = bulkMovieData.map(movie => new Movie(movie));
 
 export default movieData;
