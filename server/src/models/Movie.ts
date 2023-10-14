@@ -7,6 +7,7 @@ export type Movie = {
     description: string,
     category: string,
     duration: string,
+    rating: string,
     imageUrl: string,
     videoUrl: string
 };
@@ -29,6 +30,11 @@ const movieSchema = new Schema({
     },
 
     duration: {
+        type: String,
+        required: true,
+    },
+
+    rating: {
         type: String,
         required: true,
     },
