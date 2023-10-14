@@ -1,6 +1,6 @@
 import { Movie } from "../models/Movie";
 
-const bulkMovieData: Movie[] = [
+const movieData: Movie[] = [
   {
     title: '',
     description: '',
@@ -181,7 +181,5 @@ const bulkMovieData: Movie[] = [
     videoUrl: ''
   }
 ];
-
-const movieData = bulkMovieData.map(movie => new Movie(movie));
 
 export default movieData;
