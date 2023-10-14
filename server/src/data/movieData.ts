@@ -6,6 +6,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -15,6 +16,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -24,6 +26,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -33,6 +36,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -42,6 +46,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -51,6 +56,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -60,6 +66,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -69,6 +76,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -78,6 +86,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -87,6 +96,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -96,6 +106,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -105,6 +116,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -114,6 +126,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -123,6 +136,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -132,6 +146,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -141,6 +156,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -150,6 +166,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -159,6 +176,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -168,6 +186,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   },
@@ -177,6 +196,7 @@ const movieData: Movie[] = [
     description: '',
     category: '',
     duration: '',
+    rating: '',
     imageUrl: '',
     videoUrl: ''
   }
