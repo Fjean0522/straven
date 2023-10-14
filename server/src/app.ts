@@ -30,3 +30,6 @@ const connectToDb = async (): Promise<Connection | undefined> => {
    }  
 })()
 
+const db = mongoose.connection;
+
+export default db;
