@@ -9,11 +9,15 @@ const app: Express = express();
 const port: string | number = process.env.PORT || 3000;
 const DB_URI: string = process.env.DB_URI || '';
 
+// Middleware
 app.use(cors());
 
+
+// Movie routes
 app.use('/api/movies', router)
 
 
+// Database connection
 const connectToDb = async (): Promise<Connection | undefined> => {
     try {
         const connect = await mongoose.connect(DB_URI);
@@ -24,6 +28,8 @@ const connectToDb = async (): Promise<Connection | undefined> => {
     }
 };
 
+
+// Start server upon DB connection
 (async () => {
    try {
     await connectToDb();
