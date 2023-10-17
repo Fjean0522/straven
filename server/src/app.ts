@@ -2,6 +2,7 @@ import mongoose, { Connection } from 'mongoose';
 import express, { Express } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import router from './routes/movieRoutes';
 dotenv.config();
 
 const app: Express = express();
@@ -9,6 +10,8 @@ const port: string | number = process.env.PORT || 3000;
 const DB_URI: string = process.env.DB_URI || '';
 
 app.use(cors());
+
+app.use('/api/movies', router)
 
 
 const connectToDb = async (): Promise<Connection | undefined> => {
