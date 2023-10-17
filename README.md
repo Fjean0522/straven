@@ -1,7 +1,7 @@
 ![Straven Logo](./logo_readme.png)
 
 ## Overview
-Straven is a *Modern Streaming Platform* that allows users to Browse, Stream, and Enjoy a vast selection of Movies and TV Series. With a *user-friendly* interface and a wide variety of content, Straven aims to provide an *immersive* entertainment experience. Users can explore media content by genre, and enjoy an *engaging* viewing experience.
+Straven is a *Modern Streaming Platform* that allows users to Browse, and Stream a vast selection of Movies. With a *User-Friendly*, *Responsive*, and *Visually Engaging* interface, Straven aims to provide an *Immersive* entertainment experience.
 
 ## Technologies
 #### Straven is built using the following technologies:
@@ -26,13 +26,13 @@ A cross-platform JavaScript runtime environment.
 
 ## Features
 * **Extensive Content Library**:  
-Access a vast collection of movies and TV series spanning various genres.
+Access a vast collection of movies spanning various genres.
 
 * **Search and Filters**:  
-Powerful search functionality with filters for genres.
+Search and filter functionality for movie titles and genres.
 
 * **High-Quality Streaming**:  
-Stream content in HD and 4K with adaptive streaming for the best possible quality.
+Stream content in HD and 4K.
 
 ## Getting Started
 #### To get started with Straven locally, follow these steps:
