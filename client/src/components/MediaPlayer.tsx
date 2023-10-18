@@ -22,6 +22,14 @@ const MediaPlayer: React.FC<MediaPlayerProp> = ({ url }) => {
         <p>PG-13</p>
         <p>1h 37m</p>
       </div>
+
+      <div className="mt-1 max-w-6xl">
+        <p className="text-white text-xl opacity-80">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum sagittis libero. 
+          Donec tristique erat varius velit luctus lobortis. Proin in mollis quam, luctus rhoncus.
+          nisl Nullam vitae fringilla ligula. 
+        </p>
+      </div>
     </div>
   )
 }
