@@ -18,13 +18,13 @@ app.use('/api/movies', movieRoutes)
 
 
 // Database connection
-const connectToDb = async (): Promise<Connection | undefined> => {
+const connectToDb = async (): Promise<Connection> => {
     try {
         const connect = await mongoose.connect(DB_URI);
         return connect.connection
     } catch (error) {
         console.log(error);
-        return undefined
+        process.exit(1);
     }
 };
 
