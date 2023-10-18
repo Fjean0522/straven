@@ -2,7 +2,7 @@ import mongoose, { Connection } from 'mongoose';
 import express, { Express } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import router from './routes/movieRoutes';
+import movieRoutes from './routes/movieRoutes';  // import router as movieRoutes
 dotenv.config();
 
 const app: Express = express();
@@ -14,7 +14,7 @@ app.use(cors());
 
 
 // Movie routes
-app.use('/api/movies', router)
+app.use('/api/movies', movieRoutes)
 
 
 // Database connection
@@ -39,6 +39,4 @@ const connectToDb = async (): Promise<Connection | undefined> => {
    }  
 })()
 
-const db = mongoose.connection;
-
-export default db;
+export const db = mongoose.connection;

@@ -1,6 +1,6 @@
+import { db } from "../app";
 import { Movie } from "../models/Movie";
 import movieData from "./movieData";
-import db from "../app";
 
 
 db.on('open', () => {
@@ -23,4 +23,3 @@ db.on('open', () => {
 
     addMovies();  
 })
-
