@@ -3,7 +3,7 @@ import MediaPlayer from '../MediaPlayer'
 
 const Play: React.FC = () => {
 
-  const mediaUrl = ''
+  const mediaUrl = 'https://storage.googleapis.com/straven_movies/movies/action/Black%20Adam.mp4'
 
   console.log(`Media is displaying with url: ${mediaUrl}`)
 
