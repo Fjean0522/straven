@@ -4,8 +4,13 @@ import { getAllMovies, getMoviesByCategory, getMovie } from '../controllers/movi
 
 const router: Router = express.Router();
 
-router.get('/', getAllMovies);
-router.get('/:movieId', getMovie);
+// GET all movies
+router.get('/', getAllMovies)
+
+// GET all movies of a specific category
 router.get('/category/:category', getMoviesByCategory);
+
+// GET a single movie
+router.get('/:title', getMovie);
 
 export default router;
