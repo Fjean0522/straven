@@ -1,7 +1,7 @@
 import mongoose, { Connection } from 'mongoose';
 import express, { Express } from 'express';
 import dotenv from 'dotenv';
-import cors from 'cors';
+// import cors from 'cors';
 import movieRoutes from './routes/movieRoutes';  // import router as movieRoutes
 dotenv.config();
 
@@ -10,8 +10,12 @@ const port: string | number = process.env.PORT || 3000;
 const DB_URI: string = process.env.DB_URI || '';
 
 // Middleware
-app.use(cors());
-
+/* app.use(cors({
+    origin: '',
+    methods: 'GET',
+    credentials: true
+}));
+ */
 
 // Movie routes
 app.use('/api/movies', movieRoutes)
