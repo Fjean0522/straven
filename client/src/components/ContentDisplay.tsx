@@ -1,12 +1,9 @@
-// import movie_1 from '../assets/movie_1.png'
-// import movie_2 from '../assets/movie_2.png'
-// import movie_3 from '../assets/movie_3.png' 
-// import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
 
 type Movie = {
+  _id: string,
   title: string,
   description: string,
   category: string,
@@ -36,12 +33,6 @@ const ContentDisplay: React.FC = () => {
     getByCategory()
     
   }, [category])
-
-  // useEffect(() => {
-  //   if (movies.length > 0) {
-  //     console.log(movies)
-  //   }
-  // }, [movies])
 
   return (
     <>
@@ -75,11 +66,26 @@ const ContentDisplay: React.FC = () => {
         </button>
       </div>
 
-
+      {
+        movies.length > 0 ? (
+          <div className="text-white font-semibold text-base flex justify-evenly gap-4 p-2 md:px-7">
+            {
+              movies.map(movie => (
+                <div key={movie._id} className='flex flex-col items-center gap-2 hover:scale-105 cursor-pointer'>
+                  <img 
+                    className='hover:border hover:border-blue-400'
+                    src={movie.imageUrl} 
+                    alt={movie.title + 'Thumbnail'} 
+                  />
+                  <h1>{movie.title}</h1>
+                </div>
+              ))
+            }
+          </div>
+        ) : (<p>Loading Movies...</p>)
+      }
     </>
   )
 }
 
 export default ContentDisplay
-
-
