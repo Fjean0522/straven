@@ -1,6 +1,6 @@
 import Header from "../Header"
 import Hero from "../Hero"
-import ContentDisplay from "../ContentDisplay"
+import MediaDisplay from "../MediaDisplay"
 
 
 const Home: React.FC = () => {
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <div className="bg-black min-h-screen">
       <Header bgOpacityClass="bg-opacity-50" />
       <Hero />
-      <ContentDisplay />
+      <MediaDisplay />
     </div>
   )
 }

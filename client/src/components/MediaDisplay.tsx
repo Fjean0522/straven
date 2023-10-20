@@ -13,7 +13,7 @@ type Movie = {
   videoUrl: string
 }
 
-const ContentDisplay: React.FC = () => {
+const MediaDisplay: React.FC = () => {
   const [category, setCategory] = useState<string>('')
   const [movies, setMovies] = useState<Movie[]>([])
 
@@ -88,4 +88,4 @@ const ContentDisplay: React.FC = () => {
   )
 }
 
-export default ContentDisplay
+export default MediaDisplay
