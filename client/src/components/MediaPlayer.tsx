@@ -4,7 +4,7 @@ type MediaPlayerProp = {
   url: string
 }
 
-const MediaPlayer: React.FC<MediaPlayerProp> = ({ url }) => {
+const MediaPlayer = ({ url }: MediaPlayerProp) => {
 
   return (
     <div className="bg-black min-h-screen">
