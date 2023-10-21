@@ -1,17 +1,20 @@
 import ReactPlayer from "react-player"
+import { Movie } from "./pages/Home"
 
 type MediaPlayerProp = {
   url: string
+  media: Movie
 }
 
-const MediaPlayer = ({ url }: MediaPlayerProp) => {
+const MediaPlayer = ({ url, media }: MediaPlayerProp) => {
 
   return (
     <div className="bg-black min-h-screen">
       <div className="pb-3 h-auto">
         <ReactPlayer
-          controls
           url={url}
+          controls={true}
+          playing={true}
           width='100%'
           height='100%'
         />
@@ -19,16 +22,12 @@ const MediaPlayer = ({ url }: MediaPlayerProp) => {
 
       <div className="max-w-6xl px-7 pb-6">
         <div className="text-white flex gap-3">
-          <h2 className="text-2xl font-semibold">Black Adam</h2>
-          <p>PG-13</p>
-          <p>2h 4m</p>
+          <h2 className="text-2xl font-semibold">{media.title}</h2>
+          <p>{media.rating}</p>
+          <p>{media.duration}</p>
         </div>
 
-        <p className="text-white text-xl opacity-80">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum sagittis libero. 
-          Donec tristique erat varius velit luctus lobortis. Proin in mollis quam, luctus rhoncus.
-          nisl Nullam vitae fringilla ligula. 
-        </p>
+        <p className="text-white text-xl opacity-80">{media.description}</p>
       </div>
     </div>
   )

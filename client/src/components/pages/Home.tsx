@@ -21,7 +21,7 @@ const Home = () => {
 
   // Fetch all movies to display on initial render
   useEffect(() => {
-    fetch('api/movies')
+    fetch('/api/movies')
         .then(response => response.json())
         .then(data => setMovies(data))
         .catch(error => console.log(error))
