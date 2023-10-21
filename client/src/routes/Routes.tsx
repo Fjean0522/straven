@@ -10,7 +10,7 @@ const Routes = () => {
         },
 
         {
-            path: '/play',
+            path: '/play/:title',
             element: <Play />
         }
     ])

@@ -1,4 +1,5 @@
 import { Movie } from './pages/Home'
+import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel'
 import responsive from '../config/carouselConfig';
 import "react-multi-carousel/lib/styles.css";
@@ -22,7 +23,8 @@ const MediaDisplay = ({ movies }: moviesProp) => {
             >
             {
               movies.map(movie => (
-                <div 
+                <Link 
+                  to={`/play/${movie.title}`}
                   className='text-white font-semibold text-base flex flex-col items-center gap-2 h-full mx-1
                   hover:cursor-pointer hover:-translate-y-2 transition-transform duration-300 ease-in'
                   key={movie._id} 
@@ -33,7 +35,7 @@ const MediaDisplay = ({ movies }: moviesProp) => {
                     alt={movie.title + 'Thumbnail'} 
                   />
                   <h1>{movie.title}</h1>
-                </div>
+                </Link>
               ))
             }
           </Carousel>
