@@ -20,6 +20,23 @@ const Home = () => {
   const [category, setCategory] = useState<string>('')
   const [movies, setMovies] = useState<Movie[]>([])
 
+  // Fetch all movies to display on initial render
+  useEffect(() => {
+    const getAll = async () => {
+      try {
+        const response = await fetch('api/movies')
+        const data = await response.json()
+        setMovies(data)
+        
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getAll()
+    
+  }, [])
+
+  // Fetch movies to display by category when respective category button is clicked
   useEffect(() => {
     const getByCategory = async () => {
       try {
