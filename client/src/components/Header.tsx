@@ -34,12 +34,12 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
           <img
             src={search} 
             alt='Search Icon'
-            className='w-10 h-10 cursor-pointer'
+            className='w-10 h-10 cursor-pointer hover:scale-105'
           />
           <img 
             src={settings} 
             alt='Settings'
-            className='w-10 h-10 cursor-pointer'
+            className='w-10 h-10 cursor-pointer hover:scale-105'
           />
         </div>
       </nav>
