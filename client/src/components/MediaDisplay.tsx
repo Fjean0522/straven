@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import Carousel from 'react-multi-carousel'
+import responsive from '../config/carouselConfig';
 import "react-multi-carousel/lib/styles.css";
 
 type Movie = {
@@ -14,25 +15,6 @@ type Movie = {
   videoUrl: string
 }
 
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 1281 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 1280, min: 769 },
-    items: 4
-  },
-  tablet: {
-    breakpoint: { max: 768, min: 481 },
-    items: 3
-  },
-  mobile: {
-    breakpoint: { max: 480, min: 0 },
-    items: 2
-  }
-};
 
 const MediaDisplay: React.FC = () => {
   const [category, setCategory] = useState<string>('')
@@ -90,7 +72,7 @@ const MediaDisplay: React.FC = () => {
       {
         movies.length > 0 ? (
           <Carousel 
-            className="text-white font-semibold text-base flex justify-evenly gap-4 p-2 md:px-7"
+            className="flex justify-center pt-2 pb-5 md:px-7"
             responsive={responsive}
             swipeable={true}
             draggable={true}
@@ -98,7 +80,7 @@ const MediaDisplay: React.FC = () => {
             >
             {
               movies.map(movie => (
-                <div key={movie._id} className='flex flex-col items-center gap-2 hover:scale-105 cursor-pointer'>
+                <div key={movie._id} className='text-white font-semibold text-base flex flex-col items-center gap-2 h-full hover:scale-105 cursor-pointer'>
                   <img 
                     className='hover:border hover:border-blue-400 h-full w-full'
                     src={movie.imageUrl} 
