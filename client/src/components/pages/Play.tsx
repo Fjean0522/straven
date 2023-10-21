@@ -16,20 +16,17 @@ const mediaDefault = {
 }
 
 const Play = () => {
-  const [selectedMovie, setSelectedMovie] = useState<string | undefined>('')
   const [media, setMedia] = useState<Movie>(mediaDefault)
-
   const { title } = useParams<string>()
   
   useEffect(() => {
-    setSelectedMovie(title)
-    if (selectedMovie) {
-      fetch(`/api/movies/${selectedMovie}`)
+    if (title) {
+      fetch(`/api/movies/${title}`)
       .then(response => response.json())
       .then(data => setMedia(data[0]))
       .catch(error => console.log(error))
     }
-  }, [selectedMovie, title])
+  }, [title])
 
   
   return (
