@@ -1,39 +1,36 @@
+import { Link } from "react-router-dom"
 
-type CategoryProp = {
-    setCategory: React.Dispatch<React.SetStateAction<string>>
-}
-
-const CategorySelector = ({ setCategory }: CategoryProp) => {
+const CategorySelector = () => {
   
   return (
     <div className="text-white font-bold flex justify-between p-6 md:justify-evenly md:text-lg md:mb-5">
-        <button 
+        <Link 
+          to={'/category/Action'}
           className="hover:text-blue-600 cursor-pointer"
-          onClick={() => setCategory('Action')}
           >
           Action
-        </button>
+        </Link>
 
-        <button 
+        <Link 
+          to={'/category/Comedy'}
           className="hover:text-blue-600 cursor-pointer"
-          onClick={() => setCategory('Comedy')}
           >
           Comedy
-        </button>
+        </Link>
 
-        <button 
+        <Link 
+          to={'/category/Thriller'}
           className="hover:text-blue-600 cursor-pointer"
-          onClick={() => setCategory('Thriller')}
           >
           Thriller
-        </button>
+        </Link>
 
-        <button 
+        <Link 
+          to={'/category/Horror'}
           className="hover:text-blue-600 cursor-pointer"
-          onClick={() => setCategory('Horror')}
           >
           Horror
-        </button>
+        </Link>
       </div>
   )
 }
