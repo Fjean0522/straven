@@ -1,5 +1,4 @@
 
-
 type CategoryProp = {
     setCategory: React.Dispatch<React.SetStateAction<string>>
 }

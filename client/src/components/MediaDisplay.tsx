@@ -1,47 +1,17 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { Movie } from './pages/Home'
 import Carousel from 'react-multi-carousel'
 import responsive from '../config/carouselConfig';
-import CategorySelector from './CategorySelector';
 import "react-multi-carousel/lib/styles.css";
 
-type Movie = {
-  _id: string,
-  title: string,
-  description: string,
-  category: string,
-  duration: string,
-  rating: string,
-  imageUrl: string,
-  videoUrl: string
+type moviesProp = {
+  movies: Movie[]
 }
 
 
-const MediaDisplay = () => {
-  const [category, setCategory] = useState<string>('')
-  const [movies, setMovies] = useState<Movie[]>([])
-
-  useEffect(() => {
-    const getByCategory = async () => {
-      try {
-        if (category) {
-          const response = await fetch(`api/movies/category/${category}`)
-          const data = await response.json()
-          setMovies(data)
-        }
-        
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getByCategory()
-    
-  }, [category])
+const MediaDisplay = ({ movies }: moviesProp) => {
 
   return (
     <>
-      <CategorySelector setCategory={setCategory} />
-
       {
         movies.length > 0 ? (
           <Carousel 
