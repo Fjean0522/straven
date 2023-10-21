@@ -15,43 +15,26 @@ export type Movie = {
   videoUrl: string
 }
 
-
 const Home = () => {
   const [category, setCategory] = useState<string>('')
   const [movies, setMovies] = useState<Movie[]>([])
 
   // Fetch all movies to display on initial render
   useEffect(() => {
-    const getAll = async () => {
-      try {
-        const response = await fetch('api/movies')
-        const data = await response.json()
-        setMovies(data)
-        
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getAll()
-    
+    fetch('api/movies')
+        .then(response => response.json())
+        .then(data => setMovies(data))
+        .catch(error => console.log(error))
   }, [])
 
   // Fetch movies to display by category when respective category button is clicked
   useEffect(() => {
-    const getByCategory = async () => {
-      try {
-        if (category) {
-          const response = await fetch(`api/movies/category/${category}`)
-          const data = await response.json()
-          setMovies(data)
-        }
-        
-      } catch (error) {
-        console.log(error)
-      }
+    if (category) {
+      fetch(`api/movies/category/${category}`)
+        .then(response => response.json())
+        .then(data => setMovies(data))
+        .catch(error => console.log(error))
     }
-    getByCategory()
-    
   }, [category])
 
   return (

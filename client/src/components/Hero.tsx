@@ -2,9 +2,7 @@ import play_btn from '../assets/play_btn.png'
 import movieThumbnail from '../assets/detective_reacher_placeholder.png'
 import { Link } from 'react-router-dom'
 
-const Hero = () => {
-  
-  type BgImage = {
+type BgImage = {
     backgroundImage: string,
     backgroundSize: string,
     backgroundPosition: string,
@@ -17,6 +15,8 @@ const Hero = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
   }
+
+const Hero = () => {
 
   return (
     <div 

@@ -7,7 +7,6 @@ type moviesProp = {
   movies: Movie[]
 }
 
-
 const MediaDisplay = ({ movies }: moviesProp) => {
 
   return (

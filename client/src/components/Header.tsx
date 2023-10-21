@@ -7,10 +7,8 @@ type BgHeader = {
   bgOpacityClass?: string
 }
 
-
 const Header = ({ bgOpacityClass }: BgHeader) => {
 
-  
   return (
     <>
       <nav 
