@@ -10,6 +10,16 @@ const Routes = () => {
         },
 
         {
+            path: '/:home',
+            element: <Home />
+        },
+
+        {
+            path: '/category/:movieCategory',
+            element: <Home />
+        },
+
+        {
             path: '/play/:title',
             element: <Play />
         }
