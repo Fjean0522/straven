@@ -36,11 +36,13 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
             alt='Search Icon'
             className='w-10 h-10 cursor-pointer hover:scale-105'
           />
-          <img 
-            src={settings} 
-            alt='Settings'
-            className='w-10 h-10 cursor-pointer hover:scale-105'
-          />
+          <Link to={'/settings'}>
+            <img 
+              src={settings} 
+              alt='Settings'
+              className='w-10 h-10 cursor-pointer hover:scale-105'
+            />
+          </Link>
         </div>
       </nav>
     </>

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/pages/Home' 
 import Play from './components/pages/Play'
+import Settings from './components/Settings'
 
 const Routes = () => {
     const routes = createBrowserRouter([
@@ -22,6 +23,11 @@ const Routes = () => {
         {
             path: '/play/:title',
             element: <Play />
+        },
+
+        {
+            path: '/settings',
+            element: <Settings />
         }
     ])
 
