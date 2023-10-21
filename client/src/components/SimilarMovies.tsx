@@ -1,6 +1,6 @@
 
 
-const SimilarMovies: React.FC = () => {
+const SimilarMovies = () => {
 
 
   return (

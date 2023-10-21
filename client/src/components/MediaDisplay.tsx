@@ -16,7 +16,7 @@ type Movie = {
 }
 
 
-const MediaDisplay: React.FC = () => {
+const MediaDisplay = () => {
   const [category, setCategory] = useState<string>('')
   const [movies, setMovies] = useState<Movie[]>([])
 
@@ -39,7 +39,7 @@ const MediaDisplay: React.FC = () => {
 
   return (
     <>
-      <div className="text-white font-bold flex justify-between p-6 md:justify-evenly md:text-lg md:mb-5">
+      {/* <div className="text-white font-bold flex justify-between p-6 md:justify-evenly md:text-lg md:mb-5">
         <button 
           className="hover:text-blue-600 cursor-pointer"
           onClick={() => setCategory('Action')}
@@ -67,7 +67,7 @@ const MediaDisplay: React.FC = () => {
           >
           Horror
         </button>
-      </div>
+      </div> */}
 
       {
         movies.length > 0 ? (
@@ -80,7 +80,11 @@ const MediaDisplay: React.FC = () => {
             >
             {
               movies.map(movie => (
-                <div key={movie._id} className='text-white font-semibold text-base flex flex-col items-center gap-2 h-full hover:scale-105 cursor-pointer'>
+                <div 
+                  className='text-white font-semibold text-base flex flex-col items-center gap-2 h-full mx-1
+                  hover:cursor-pointer hover:-translate-y-2 transition-transform duration-300 ease-in'
+                  key={movie._id} 
+                  >
                   <img 
                     className='hover:border hover:border-blue-400 h-full w-full'
                     src={movie.imageUrl} 

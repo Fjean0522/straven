@@ -3,7 +3,7 @@ import Hero from "../Hero"
 import MediaDisplay from "../MediaDisplay"
 
 
-const Home: React.FC = () => {
+const Home = () => {
 
 
   return (

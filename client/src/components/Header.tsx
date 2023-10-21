@@ -8,7 +8,7 @@ type BgHeader = {
 }
 
 
-const Header: React.FC<BgHeader> = ({ bgOpacityClass }) => {
+const Header = ({ bgOpacityClass }: BgHeader) => {
 
   
   return (
