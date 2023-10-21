@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from '../components/pages/Home' 
-import Play from '../components/pages/Play'
+import Home from './components/pages/Home' 
+import Play from './components/pages/Play'
 
 const Routes = () => {
     const routes = createBrowserRouter([
