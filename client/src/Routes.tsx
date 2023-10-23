@@ -11,18 +11,28 @@ const Routes = () => {
         },
 
         {
-            path: '/:home',
+            path: '/home',
             element: <Home />
         },
 
         {
-            path: '/category/:movieCategory',
+            path: '/:title',
+            element: <Home />
+        },
+
+        {
+            path: '/home/:title',
             element: <Home />
         },
 
         {
             path: '/play/:title',
             element: <Play />
+        },
+
+        {
+            path: '/category/:movieCategory',
+            element: <Home />
         },
 
         {
