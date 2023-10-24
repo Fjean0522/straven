@@ -15,7 +15,7 @@ const MediaDisplay = ({ movies }: moviesProp) => {
       {
         movies.length > 0 ? (
           <Carousel 
-            className="flex justify-center pt-2 pb-5 md:px-7"
+            className='flex justify-center pt-2 pb-5 md:px-7'
             responsive={responsive}
             swipeable={true}
             draggable={true}
@@ -39,7 +39,7 @@ const MediaDisplay = ({ movies }: moviesProp) => {
               ))
             }
           </Carousel>
-        ) : (<p>Loading Movies...</p>)
+        ) : <p>Loading Movies...</p>
       }
     </>
   )

@@ -31,11 +31,14 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
         </div>
 
         <div className='items-center gap-2 hidden lg:flex' >
-          <img
-            src={search} 
-            alt='Search Icon'
-            className='w-10 h-10 cursor-pointer hover:scale-105'
-          />
+          <div>
+            <img
+              src={search} 
+              alt='Search Icon'
+              className='w-10 h-10 cursor-pointer hover:scale-105'
+            />
+          </div>
+
           <Link to={'/settings'}>
             <img 
               src={settings} 
