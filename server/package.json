@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc",
+    "build": "npx tsc",
     "dev": "nodemon ./src/app.ts"
   },
   "dependencies": {
