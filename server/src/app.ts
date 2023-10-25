@@ -18,7 +18,7 @@ const DB_URI: string = process.env.DB_URI || '';
  */
 
 // Movie routes
-app.use('/api/movies', movieRoutes)
+app.use('/', movieRoutes)
 
 
 // Database connection
