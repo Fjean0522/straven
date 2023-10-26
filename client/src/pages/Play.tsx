@@ -18,10 +18,11 @@ const mediaDefault = {
 const Play = () => {
   const [media, setMedia] = useState<Movie>(mediaDefault)
   const { title } = useParams<string>()
+  const API_URL: string = import.meta.env.VITE_API_URL
   
   useEffect(() => {
     if (title) {
-      fetch(`/api/movies/${title}`)
+      fetch(`${API_URL}/${title}`)
       .then(response => response.json())
       .then(data => setMedia(data[0]))
       .catch(error => console.log(error))

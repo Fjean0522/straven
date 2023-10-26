@@ -21,18 +21,19 @@ const Home = () => {
 
   // Get url endpoints
   const { movieCategory } = useParams<string>()
+  const API_URL: string = import.meta.env.VITE_API_URL
 
   useEffect(() => {
     // Fetch movies by category if category is specified in url 
     if (movieCategory) {
-        fetch(`/api/movies/category/${movieCategory}`)
+        fetch(`${API_URL}/category/${movieCategory}`)
         .then(response => response.json())
         .then(data => setMovies(data))
         .catch(error => console.log(error))
 
     // Fetch all movies if movie category is not specified
     } else {
-        fetch('/api/movies')
+        fetch(API_URL)
         .then(response => response.json())
         .then(data => setMovies(data))
         .catch(error => console.log(error))
