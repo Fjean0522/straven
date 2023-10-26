@@ -5,11 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: /\.(mp4|webm)$/,
-  // base: '/',
-  server: {
+  /* server: {
     proxy: {
       // proxy the api address
       '/api': 'http://localhost:3000'
     }
-  }
+  } */
 })
