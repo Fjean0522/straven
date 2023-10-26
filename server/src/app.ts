@@ -11,7 +11,7 @@ const DB_URI: string = process.env.DB_URI || '';
 
 // Middleware
 app.use(cors({
-    origin: ['https://straven.onrender.com/', 'https://straven.netlify.app/'],
+    origin: ['https://straven.onrender.com/', 'https://straven.netlify.app/', 'http://localhost:3000/'],
     methods: 'GET',
     credentials: true
 }));
