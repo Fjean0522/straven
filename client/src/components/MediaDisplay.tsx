@@ -1,4 +1,4 @@
-import { Movie } from './pages/Home'
+import { Movie } from '../pages/Home'
 import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel'
 import responsive from '../config/carouselConfig';

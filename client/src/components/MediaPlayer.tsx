@@ -1,5 +1,5 @@
 import ReactPlayer from "react-player"
-import { Movie } from "./pages/Home"
+import { Movie } from "../pages/Home"
 
 type MediaPlayerProp = {
   url: string
