@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import Header from "../Header"
-import Hero from "../Hero"
-import CategorySelector from "../CategorySelector"
-import MediaDisplay from "../MediaDisplay"
+import Header from "../components/Header"
+import Hero from "../components/Hero"
+import CategorySelector from "../components/CategorySelector"
+import MediaDisplay from "../components/MediaDisplay"
 
 export type Movie = {
   _id: string,

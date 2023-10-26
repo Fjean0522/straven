@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { Movie } from "./Home"
 import { useParams } from "react-router-dom"
-import Header from "../Header"
-import MediaPlayer from '../MediaPlayer'
+import Header from "../components/Header"
+import MediaPlayer from '../components/MediaPlayer'
 
 const mediaDefault = {
   _id: '',
