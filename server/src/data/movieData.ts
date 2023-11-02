@@ -14,17 +14,6 @@ const movieData: Movie[] = [
   },
 
   {
-    title: 'Extraction',
-    description: `Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career 
-    when he\'s enlisted to rescue the kidnapped son of an imprisoned international crime lord.`,
-    category: 'Action',
-    duration: '1h 57m',
-    rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/extraction.jpg',
-    videoUrl: 'https://storage.googleapis.com/straven_movies/movies/action/Extraction.mp4'
-  },
-
-  {
     title: 'Training Day',
     description: `A rookie cop spends his first day as a Los Angeles narcotics officer with a rogue detective
     who isn't what he appears to be.`,
