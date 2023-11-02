@@ -28,11 +28,11 @@ A cross-platform JavaScript runtime environment.
 * **Extensive Content Library**:  
 Access a vast collection of movies spanning various genres.
 
-* **Search and Filters**:  
-Search and filter functionality for movie titles and genres.
+* **Filters**:  
+Filter functionality for movie genres.
 
 * **High-Quality Streaming**:  
-Stream content in HD and 4K.
+Stream content in HD.
 
 ## Getting Started
 #### To get started with Straven locally, follow these steps:
