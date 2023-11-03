@@ -9,7 +9,7 @@ const movieData: Movie[] = [
     category: 'Action',
     duration: '2h 4m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/black_adam.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/action/black_adam.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/action/Black%20Adam.mp4'
   },
 
@@ -20,7 +20,7 @@ const movieData: Movie[] = [
     category: 'Action',
     duration: '2h 2m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/training_day.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/action/training_day.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/action/Training%20Day.mp4'
   },
 
@@ -31,7 +31,7 @@ const movieData: Movie[] = [
     category: 'Action',
     duration: '2h 21m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/wonder_woman.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/action/wonder_woman.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/action/Wonder%20Woman.mp4'
   },
 
@@ -42,7 +42,7 @@ const movieData: Movie[] = [
     category: 'Comedy',
     duration: '1h 56m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/the_other_guys.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/comedy/the_other_guys.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/comedy/The%20Other%20Guys.mp4'
   },
 
@@ -53,7 +53,7 @@ const movieData: Movie[] = [
     category: 'Comedy',
     duration: '1h 28m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/scary_movie.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/comedy/scary_movie.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/comedy/Scary%20Movie.mp4'
   },
 
@@ -63,7 +63,7 @@ const movieData: Movie[] = [
     category: 'Comedy',
     duration: '1h 22m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/scary_movie2.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/comedy/scary_movie2.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/comedy/Scary%20Movie%202.mp4'
   },
 
@@ -74,7 +74,7 @@ const movieData: Movie[] = [
     category: 'Comedy',
     duration: '1h 25m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/scary_movie3jpeg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/comedy/scary_movie3jpeg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/comedy/Scary%20Movie%203.mp4'
   },
 
@@ -86,7 +86,7 @@ const movieData: Movie[] = [
     category: 'Comedy',
     duration: '1h 29m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/scary_movie4.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/comedy/scary_movie4.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/comedy/Scary%20Movie%204.mp4'
   },
 
@@ -97,7 +97,7 @@ const movieData: Movie[] = [
     category: 'Comedy',
     duration: '1h 28m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/scary_movie5.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/comedy/scary_movie5.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/comedy/Scary%20Movie%205.mp4'
   },
 
@@ -108,7 +108,7 @@ const movieData: Movie[] = [
     category: 'Horror',
     duration: '1h 37m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/come_play.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/horror/come_play.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/horror/Come%20Play.mp4'
   },
 
@@ -119,7 +119,7 @@ const movieData: Movie[] = [
     category: 'Horror',
     duration: '1h 55m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/smile.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/horror/smile.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/horror/Smile.mp4'
   },
 
@@ -130,7 +130,7 @@ const movieData: Movie[] = [
     category: 'Horror',
     duration: '1h 36m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/the_nun.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/horror/the_nun.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/horror/The%20Nun.mp4'
   },
 
@@ -141,7 +141,7 @@ const movieData: Movie[] = [
     category: 'Horror',
     duration: '1h 45m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/insidious2.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/horror/insidious2.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/horror/Insidious%202.mp4'
   },
 
@@ -153,7 +153,7 @@ const movieData: Movie[] = [
     category: 'Horror',
     duration: '1h 37m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/insidious3.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/horror/insidious3.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/horror/Insidious%203.mp4'
   },
 
@@ -163,7 +163,7 @@ const movieData: Movie[] = [
     category: 'Horror',
     duration: '1h 47m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/insidious_the_red_door.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/horror/insidious_the_red_door.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/horror/Insidious%3A%20The%20Red%20Door.mp4'
   },
 
@@ -174,7 +174,7 @@ const movieData: Movie[] = [
     category: 'Thriller',
     duration: '1h 28m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/dont_breathe.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/thriller/dont_breathe.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/thriller/Dont%20Breath.mp4'
   },
 
@@ -186,7 +186,7 @@ const movieData: Movie[] = [
     category: 'Thriller',
     duration: '1h 52m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/house_on_the_left.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/thriller/house_on_the_left.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/thriller/Last%20House%20on%20the%20Left.mp4'
   },
 
@@ -197,7 +197,7 @@ const movieData: Movie[] = [
     category: 'Thriller',
     duration: '1h 49m',
     rating: 'R',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/law_abiding_citizen.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/thriller/law_abiding_citizen.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/thriller/Law%20Abiding%20Citizen.mp4'
   },
 
@@ -208,7 +208,7 @@ const movieData: Movie[] = [
     category: 'Thriller',
     duration: '1h 53m',
     rating: 'PG-13',
-    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/the_meg.jpg',
+    imageUrl: 'https://storage.googleapis.com/straven_movies/movie_thumbnails/thriller/the_meg.jpg',
     videoUrl: 'https://storage.googleapis.com/straven_movies/movies/thriller/The%20Meg.mp4'
   }
 ];
