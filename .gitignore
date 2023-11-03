@@ -1,10 +1,10 @@
 *.local
 .pseudo
 .env
-cloud-key.json
 dist
 dist-ssr
 node_modules
+data_backup
 
 # Logs
 *.log
