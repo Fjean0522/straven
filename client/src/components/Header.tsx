@@ -1,6 +1,6 @@
-import menu from '../assets/hamburger_menu.png'
-import search from '../assets/search.png'
-import settings from '../assets/settings.png'
+// import menu from '../assets/hamburger_menu.png'
+// import search from '../assets/search.png'
+// import settings from '../assets/settings.png'
 import { Link } from 'react-router-dom'
 
 type BgHeader = {
@@ -22,15 +22,15 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
           </Link>
         </div>
 
-        <div className='lg:hidden'>
+        {/* <div className='lg:hidden'>
           <img 
             src={menu} 
             alt='Menu'
             className='w-8 h-8'
           />
-        </div>
-
-        <div className='items-center gap-2 hidden lg:flex' >
+        </div> */}
+        
+        {/* <div className='items-center gap-2 hidden lg:flex' >
           <div>
             <img
               src={search} 
@@ -46,7 +46,7 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
               className='w-10 h-10 cursor-pointer hover:scale-105'
             />
           </Link>
-        </div>
+        </div> */}
       </nav>
     </>
   )
