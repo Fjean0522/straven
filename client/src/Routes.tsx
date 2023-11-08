@@ -34,11 +34,6 @@ const Routes = () => {
             path: '/category/:movieCategory',
             element: <Home />
         },
-
-        {
-            path: '/settings',
-            element: <Settings />
-        }
     ])
 
   return <RouterProvider router={routes}/>
