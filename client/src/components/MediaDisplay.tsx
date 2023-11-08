@@ -25,8 +25,8 @@ const MediaDisplay = ({ movies }: moviesProp) => {
               movies.map(movie => (
                 <Link 
                   to={`/play/${movie.title}`}
-                  className='text-white font-semibold text-base flex flex-col items-center gap-2 h-full mx-1
-                  hover:cursor-pointer hover:-translate-y-2 transition-transform duration-300 ease-in'
+                  className='text-white font-semibold text-base flex flex-col items-center gap-2 h-full mx-1 mt-6
+                  hover:cursor-pointer hover:-translate-y-2 transition-transform duration-300 ease-in md:mt-0'
                   key={movie._id} 
                   >
                   <img 
