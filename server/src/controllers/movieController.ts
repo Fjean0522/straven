@@ -6,7 +6,7 @@ import { Movie } from "../models/Movie";
 export const getAllMovies = async (req: Request, res: Response) => {
     try {
         const movies = await Movie.aggregate(
-            [ { $sample: { size: 20 } } ]
+            [ { $sample: { size: 30 } } ]
         );
 
         res.status(200).json(movies);
