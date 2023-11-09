@@ -3,6 +3,8 @@ import { Movie } from "../models/Movie";
 import movieData from "./movieData";
 
 
+// Upon connection, match movie titles from movieData array to movies in the database.
+// If movie is not already in the database, insert it.
 db.on('open', () => {
     const addMovies = async (): Promise<void> => {    
         try {

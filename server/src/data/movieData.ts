@@ -1,5 +1,6 @@
 import { Movie } from "../models/Movie";
 
+// Movies to be inserted into the database
 const movieData: Movie[] = [
   {
     title: '',
