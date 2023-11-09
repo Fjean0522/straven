@@ -1,22 +1,44 @@
 import play_btn from '../assets/play_btn.png'
-import movieThumbnail from '../assets/detective_reacher_placeholder.png'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Movie } from '../pages/Home'
+import { mediaDefault } from '../pages/Play'
 
 type BgImage = {
-    backgroundImage: string,
-    backgroundSize: string,
-    backgroundPosition: string,
-    backgroundRepeat: string
-  }
-  
-  const heroImage: BgImage = {
-    backgroundImage: `url(${movieThumbnail})`,
+  backgroundImage: string,
+  backgroundSize: string,
+  backgroundPosition: string,
+  backgroundRepeat: string
+}
+
+const Hero = () => {
+  const [movie, setMovie] = useState<Movie>(mediaDefault)
+  const [heroImage, setHeroImage] = useState<BgImage>({
+
+    backgroundImage: `url()`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-  }
+  })
+  
+  const API_URL: string = import.meta.env.VITE_API_URL
 
-const Hero = () => {
+  useEffect(() => {
+    fetch(`${API_URL}/randomMovie`)
+      .then(response => response.json())
+      .then(data => {
+        setMovie(data[0])
+        setHeroImage({
+          backgroundImage: `url(${data[0].imageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        })
+      })
+      .catch(error => console.log(error))
+  }, [])
+
+  
 
   return (
     <div 
@@ -25,16 +47,12 @@ const Hero = () => {
     >
       <div className='flex flex-col justify-center min-h-full min-w-full bg-black bg-opacity-40 rounded-xl lg:ml-3 px-6'>
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
-          <h2 className='text-white text-xl font-bold lg:text-2xl'>Detective Reacher</h2>
-          <p className='text-white mb-3'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Ut a sapien sed ex feugiat faucibus nec quis lectus. 
-            Maecenas facilisis pretium diam, a sodales risus malesuada eu.
-          </p>
+          <h2 className='text-white text-xl font-bold lg:text-2xl'>{movie.title}</h2>
+          <p className='text-white mb-3'>{movie.description}</p>
         </div>
 
         <Link
-          to='/play'
+          to={`/play/${movie.title}`}
           className='bg-white flex items-center justify-center gap-2 text-lg font-bold w-28 p-2 rounded-xl cursor-pointer hover:scale-105'>
           <img
             src={play_btn} 

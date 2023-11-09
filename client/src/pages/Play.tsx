@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import Header from "../components/Header"
 import MediaPlayer from '../components/MediaPlayer'
 
-const mediaDefault = {
+export const mediaDefault = {
   _id: '',
   title: '',
   description: '',
