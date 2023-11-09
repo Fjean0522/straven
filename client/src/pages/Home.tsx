@@ -19,8 +19,9 @@ export type Movie = {
 const Home = () => {
   const [movies, setMovies] = useState<Movie[]>([])
 
-  // Get url endpoints
+  // Get url parameter / endpoint
   const { movieCategory } = useParams<string>()
+  
   const API_URL: string = import.meta.env.VITE_API_URL
 
   useEffect(() => {

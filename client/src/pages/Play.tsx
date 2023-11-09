@@ -17,9 +17,13 @@ export const mediaDefault = {
 
 const Play = () => {
   const [media, setMedia] = useState<Movie>(mediaDefault)
+
+  // Get url parameter / endpoint
   const { title } = useParams<string>()
+
   const API_URL: string = import.meta.env.VITE_API_URL
   
+  // Fetch movie specified in the url
   useEffect(() => {
     if (title) {
       fetch(`${API_URL}/${title}`)

@@ -14,7 +14,7 @@ type BgImage = {
 const Hero = () => {
   const [movie, setMovie] = useState<Movie>(mediaDefault)
   const [heroImage, setHeroImage] = useState<BgImage>({
-
+    // Movie display styles
     backgroundImage: `url()`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -23,6 +23,7 @@ const Hero = () => {
   
   const API_URL: string = import.meta.env.VITE_API_URL
 
+  // Fetch random movie to display
   useEffect(() => {
     fetch(`${API_URL}/randomMovie`)
       .then(response => response.json())
@@ -45,6 +46,7 @@ const Hero = () => {
       className='p-6 h-72 md:h-96' 
       style={heroImage}
     >
+      {/* Movie details */}
       <div className='flex flex-col justify-center min-h-full min-w-full bg-black bg-opacity-40 rounded-xl lg:ml-3 px-6'>
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
           <h2 className='text-white text-xl font-bold lg:text-2xl'>{movie.title}</h2>
@@ -55,6 +57,7 @@ const Hero = () => {
           <p className='text-white mb-3'>{movie.description}</p>
         </div>
 
+        {/* Movie play button */}
         <Link
           to={`/play/${movie.title}`}
           className='bg-white flex items-center justify-center gap-2 text-lg font-bold w-28 p-2 rounded-xl cursor-pointer hover:scale-105'>

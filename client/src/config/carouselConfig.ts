@@ -1,4 +1,4 @@
-
+// MediaDisplay Carousel configurations
 const responsive = {
   LargeDesktop: {
     breakpoint: { max: 4000, min: 1281 },

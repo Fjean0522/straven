@@ -20,6 +20,7 @@ const MediaPlayer = ({ url, media }: MediaPlayerProp) => {
         />
       </div>
 
+      {/* Movie details */}
       <div className="max-w-6xl px-7 pb-6">
         <div className="text-white flex gap-3">
           <h2 className="text-2xl font-semibold">{media.title}</h2>
