@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { getAllMovies, getMoviesByCategory, getMovie, getHeroMovie } from '../controllers/movieController';
+import { getAllMovies, getMoviesByCategory, getMovie, getRandomMovie } from '../controllers/movieController';
 
 
 const router: Router = express.Router();
@@ -11,7 +11,7 @@ router.get('/', getAllMovies);
 router.get('/category/:category', getMoviesByCategory);
 
 // GET a single movie randomly
-router.get('/heroMovie', getHeroMovie);
+router.get('/randomMovie', getRandomMovie);
 
 // GET a single movie
 router.get('/:title', getMovie);

@@ -43,7 +43,7 @@ export const getMovie = async (req: Request, res: Response) => {
 
 
 // GET a single movie randomly
-export const getHeroMovie = async (req: Request, res: Response) => {
+export const getRandomMovie = async (req: Request, res: Response) => {
     try {
         const randomMovie = await Movie.aggregate(
             [ { $sample: { size: 1 } } ]
