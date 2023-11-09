@@ -48,6 +48,10 @@ const Hero = () => {
       <div className='flex flex-col justify-center min-h-full min-w-full bg-black bg-opacity-40 rounded-xl lg:ml-3 px-6'>
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
           <h2 className='text-white text-xl font-bold lg:text-2xl'>{movie.title}</h2>
+          <div className='flex gap-3'>
+            <p className='text-white mb-3'>{movie.rating}</p>
+            <p className='text-white mb-3'>{movie.duration}</p>
+          </div>
           <p className='text-white mb-3'>{movie.description}</p>
         </div>
 
