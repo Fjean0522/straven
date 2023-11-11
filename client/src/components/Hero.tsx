@@ -46,8 +46,8 @@ const Hero = () => {
       className='p-6 h-72 md:h-96' 
       style={heroImage}
     >
-      {/* Movie details */}
-      <div className='flex flex-col justify-center min-h-full min-w-full bg-black bg-opacity-40 rounded-xl lg:ml-3 px-6'>
+      <div className='flex flex-col justify-center min-h-full min-w-full bg-black bg-opacity-40 rounded-xl px-6 lg:ml-3'>
+        {/* Movie details */}
         <div className='max-w-xs md:max-w-md lg:max-w-lg'>
           <h2 className='text-white text-xl font-bold lg:text-2xl'>{movie.title}</h2>
           <div className='flex gap-3'>
