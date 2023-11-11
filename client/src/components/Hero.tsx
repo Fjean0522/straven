@@ -39,8 +39,6 @@ const Hero = () => {
       .catch(error => console.log(error))
   }, [])
 
-  
-
   return (
     <div 
       className='p-6 h-72 md:h-96' 

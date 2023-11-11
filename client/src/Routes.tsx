@@ -10,16 +10,6 @@ const Routes = () => {
         },
 
         {
-            path: '/:title',
-            element: <Home />
-        },
-
-        {
-            path: '/home/:title',
-            element: <Home />
-        },
-
-        {
             path: '/play/:title',
             element: <Play />
         },
