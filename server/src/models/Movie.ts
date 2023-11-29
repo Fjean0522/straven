@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 export type Movie = {
-    title: string,
-    description: string,
-    category: string,
-    duration: string,
-    rating: string,
-    imageUrl: string,
+    title: string
+    description: string
+    category: string
+    duration: string
+    rating: string
+    imageUrl: string
     videoUrl: string
 };
 
@@ -16,37 +16,37 @@ export type Movie = {
 const movieSchema = new Schema({
     title: {
         type: String,
-        required: true,
+        required: true
     },
 
     description: {
         type: String,
-        required: true,
+        required: true
     },
 
     category: {
         type: String,
-        required: true,
+        required: true
     },
 
     duration: {
         type: String,
-        required: true,
+        required: true
     },
 
     rating: {
         type: String,
-        required: true,
+        required: true
     },
 
     imageUrl: {
         type: String,
-        required: true,
+        required: true
     },
 
     videoUrl: {
         type: String,
-        required: true,
+        required: true
     }
 });
 
