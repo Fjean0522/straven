@@ -1,0 +1,44 @@
+import mongoose from "mongoose";
+import * as bcrypt from 'bcrypt';
+
+type User = {
+    username: string
+    email: string
+    password: string
+};
+
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema<User>({
+    username: {
+        type: String,
+        required: true
+    },
+
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+
+    password: {
+        type: String,
+        required: true,
+    }
+
+}, { timestamps: true });
+
+// Hash User password before saving to the database
+userSchema.pre('save', async function(next) {
+    if (!this.isModified('password')) {
+        next();
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+});
+
+
+const User = mongoose.model<User>('User', userSchema);
+
+export default User;
