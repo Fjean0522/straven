@@ -4,7 +4,7 @@ import { Request, Response } from "express"
 
 
 // Task:   Register new user
-// Route:  POST /api/users 
+// Route:  POST /users 
 // Access: Public
 const registerUser = async (req: Request, res: Response) => {
     try {
@@ -45,7 +45,7 @@ const registerUser = async (req: Request, res: Response) => {
 
 
 // Task:   Authenticate / Login user
-// Route:  POST /api/users/login 
+// Route:  POST /users/login 
 // Access: Public
 const loginUser = async (req: Request, res: Response) => {
     try {
@@ -72,7 +72,7 @@ const loginUser = async (req: Request, res: Response) => {
 
 
 // Task:   Authenticate / Login user
-// Route:  POST /api/users/logout 
+// Route:  POST /users/logout 
 // Access: Public
 const logoutUser = async (req: Request, res: Response) => {
     try {
@@ -89,7 +89,7 @@ const logoutUser = async (req: Request, res: Response) => {
 
 
 // Task:   Get user profile
-// Route:  GET /api/users/profile 
+// Route:  GET /users/profile 
 // Access: Private
 const getUserProfile = async (req: Request, res: Response) => {
     try {
@@ -110,7 +110,7 @@ const getUserProfile = async (req: Request, res: Response) => {
 
 
 // Task:   Update user profile
-// Route:  PUT /api/users/profile
+// Route:  PUT /users/profile
 // Access: Private
 const updateUserProfile = async (req: Request, res: Response) => {
     try {

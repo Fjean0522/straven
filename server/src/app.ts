@@ -26,8 +26,8 @@ app.use(cookieParser());
 
 
 // Routes
-app.use('/api/users', userRoutes);
-app.use('/api/movies', movieRoutes);
+app.use('/users', userRoutes);
+app.use('/movies', movieRoutes);
 
 
 // Error Middleware
