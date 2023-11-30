@@ -1,8 +1,12 @@
 import mongoose, { Connection } from 'mongoose';
 import express, { Express } from 'express';
+import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import movieRoutes from './routes/movieRoutes';  // import router as movieRoutes
+import userRoutes from './routes/userRoutes';  // import router as userRoutes
+import { errorHandler, notFound } from './middleware/errorMiddleware';
+
 dotenv.config();
 
 const app: Express = express();
@@ -16,9 +20,19 @@ app.use(cors({
     credentials: true
 }));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
-// Movie routes
-app.use('/', movieRoutes)
+
+// Routes
+app.use('/api/users', userRoutes);
+app.use('/api/movies', movieRoutes);
+
+
+// Error Middleware
+app.use(notFound);
+app.use(errorHandler);
 
 
 // Database connection
