@@ -1,3 +1,4 @@
+import { log } from "console";
 import User from "../models/user";
 import generateToken from "../utils/generateToken";
 import { Request, Response } from "express"
@@ -100,7 +101,35 @@ const getUserProfile = async (req: Request, res: Response) => {
 // Route:  PUT /api/users/profile
 // Access: Private
 const updateUserProfile = async (req: Request, res: Response) => {
+    try {
+        const user = await User.findById(req.user!._id);
     
+        // Update user info
+        if (user) {
+            user.username = req.body.username || user.username;
+            user.email = req.body.email || user.email;
+            
+            // Check if a new password is provided
+            if (req.body.password) {
+                user.password = req.body.password;
+            }
+    
+            // Resave the user with the updated info
+            const updatedUser = await user.save();
+            
+            res.status(200).json({
+                _id: updatedUser._id,
+                username: updatedUser.username,
+                email: updatedUser.email
+            });
+            
+        } else {
+            res.status(404);
+            throw new Error('User not found');
+        };
+    } catch (error) {
+        console.log(error);
+    };
 };
 
 
