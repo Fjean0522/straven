@@ -1,4 +1,3 @@
-import { log } from "console";
 import User from "../models/user";
 import generateToken from "../utils/generateToken";
 import { Request, Response } from "express"
@@ -85,7 +84,15 @@ const logoutUser = async (req: Request, res: Response) => {
 // Route:  GET /api/users/profile 
 // Access: Private
 const getUserProfile = async (req: Request, res: Response) => {
-    
+    if (req.user) {
+      const user = {
+        _id: req.user._id,
+        username: req.user.username,
+        email: req.user.email
+      };  
+
+      res.status(200).json(user);
+    };
 };
 
 
