@@ -1,4 +1,3 @@
-import { log } from "console";
 import User from "../models/user";
 import generateToken from "../utils/generateToken";
 import { Request, Response } from "express"
@@ -9,7 +8,7 @@ import { Request, Response } from "express"
 // Access: Public
 const registerUser = async (req: Request, res: Response) => {
     try {
-        const { name, email, password } = req.body;
+        const { username, email, password } = req.body;
     
         // Check if user already exists
         const userExists = await User.findOne({ email });
@@ -21,7 +20,7 @@ const registerUser = async (req: Request, res: Response) => {
 
         // Else create new user
         const user = await User.create({
-            name,
+            username,
             email,
             password
         });

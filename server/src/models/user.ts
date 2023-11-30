@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import * as bcrypt from 'bcrypt';
-import { promises } from "dns";
 
 type User = {
     username: string
