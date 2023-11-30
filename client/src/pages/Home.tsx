@@ -27,14 +27,14 @@ const Home = () => {
   useEffect(() => {
     // Fetch movies by category if category is specified in url 
     if (movieCategory) {
-        fetch(`${API_URL}/category/${movieCategory}`)
+        fetch(`${API_URL}/movies/category/${movieCategory}`)
         .then(response => response.json())
         .then(data => setMovies(data))
         .catch(error => console.log(error))
 
     // Fetch all movies if movie category is not specified
     } else {
-        fetch(API_URL)
+        fetch(`${API_URL}/movies`)
         .then(response => response.json())
         .then(data => setMovies(data))
         .catch(error => console.log(error))

@@ -25,7 +25,7 @@ const Hero = () => {
 
   // Fetch random movie to display
   useEffect(() => {
-    fetch(`${API_URL}/randomMovie`)
+    fetch(`${API_URL}/movies/randomMovie`)
       .then(response => response.json())
       .then(data => {
         setMovie(data[0])

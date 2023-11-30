@@ -26,7 +26,7 @@ const Play = () => {
   // Fetch movie specified in the url
   useEffect(() => {
     if (title) {
-      fetch(`${API_URL}/${title}`)
+      fetch(`${API_URL}/movies/${title}`)
       .then(response => response.json())
       .then(data => setMedia(data[0]))
       .catch(error => console.log(error))
