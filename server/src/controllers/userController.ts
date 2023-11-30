@@ -49,21 +49,25 @@ const registerUser = async (req: Request, res: Response) => {
 // Route:  POST /api/users/login 
 // Access: Public
 const loginUser = async (req: Request, res: Response) => {
-    const { email, password } = req.body;
-
-    //  Check if user is registered in the database
-    const user = await User.findOne({ email });
-
-    if (user && (await user.matchPassword(password))) {
-        generateToken(res, user._id);
-        res.status(200).json({
-            _id: user._id,
-            username: user.username,
-            email: user.email
-        });
-    } else {
-        res.status(401);
-        throw new Error('Invalid email or password');
+    try {
+        const { email, password } = req.body;
+    
+        //  Check if user is registered in the database
+        const user = await User.findOne({ email });
+    
+        if (user && (await user.matchPassword(password))) {
+            generateToken(res, user._id);
+            res.status(200).json({
+                _id: user._id,
+                username: user.username,
+                email: user.email
+            });
+        } else {
+            res.status(401);
+            throw new Error('Invalid email or password');
+        };
+    } catch (error) {
+        console.log(error);
     };
 };
 
@@ -72,12 +76,16 @@ const loginUser = async (req: Request, res: Response) => {
 // Route:  POST /api/users/logout 
 // Access: Public
 const logoutUser = async (req: Request, res: Response) => {
-    res.cookie('jwt', '', {
-        httpOnly: true,
-        expires: new Date(0)
-    });
-
-    res.status(200).json({ message: 'User has Loged out' });
+    try {
+        res.cookie('jwt', '', {
+            httpOnly: true,
+            expires: new Date(0)
+        });
+    
+        res.status(200).json({ message: 'User has Loged out' });
+    } catch (error) {
+        console.log(error);
+    };
 };
 
 
@@ -85,14 +93,19 @@ const logoutUser = async (req: Request, res: Response) => {
 // Route:  GET /api/users/profile 
 // Access: Private
 const getUserProfile = async (req: Request, res: Response) => {
-    if (req.user) {
-      const user = {
-        _id: req.user._id,
-        username: req.user.username,
-        email: req.user.email
-      };  
-
-      res.status(200).json(user);
+    try {
+        if (req.user) {
+          const user = {
+            _id: req.user._id,
+            username: req.user.username,
+            email: req.user.email
+          };  
+    
+          res.status(200).json(user);
+        };
+    } catch (error) {
+        console.log();
+        console.log(error);
     };
 };
 
