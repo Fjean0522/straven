@@ -1,4 +1,5 @@
-import express, { Router } from 'express'
+import express, { Router } from 'express';
+import { protect } from '../middleware/authMiddleware';
 import {
     registerUser,
     loginUser,
@@ -11,16 +12,16 @@ import {
 const router: Router = express.Router();
 
 // Register a new user
-router.post();
+router.post('/', registerUser);
 
 // Login user
-router.post();
+router.post('/login', loginUser);
 
 // Logout user 
-router.post();
+router.post('/logout', logoutUser);
 
 // Get user profile || Update user profile
-router.route();
+router.route('/profile').get(protect, getUserProfile).put(protect, updateUserProfile);
 
 
 export default router;
