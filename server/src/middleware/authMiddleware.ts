@@ -9,7 +9,7 @@ declare module 'express-serve-static-core' {
     }
 }
 
-const protect = asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+export const protect = asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     let token: string | undefined;
 
     token = req.cookies.jwt;

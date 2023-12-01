@@ -16,7 +16,7 @@ const DB_URI: string = process.env.DB_URI || '';
 // Middleware
 app.use(cors({
     origin: ['https://straven.onrender.com', 'http://localhost:5173'],
-    methods: 'GET',
+    methods: 'GET, POST, PUT',
     credentials: true
 }));
 
