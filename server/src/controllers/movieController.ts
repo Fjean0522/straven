@@ -2,7 +2,9 @@ import { Request, Response } from "express";
 import { Movie } from "../models/Movie";
 
 
-// GET all movies
+// Task:   Get all movies
+// Route:  GET /movies 
+// Access: Private
 export const getAllMovies = async (req: Request, res: Response) => {
     try {
         // get movies in random order
@@ -17,7 +19,10 @@ export const getAllMovies = async (req: Request, res: Response) => {
     };
 };
 
-// GET all movies of a specific category
+
+// Task:   Get all movies of a specific category
+// Route:  GET /movies/category/:category
+// Access: Private
 export const getMoviesByCategory = async (req: Request, res: Response) => {
     try {
         const {category} = req.params;
@@ -29,7 +34,10 @@ export const getMoviesByCategory = async (req: Request, res: Response) => {
     };
 };
 
-// GET a single movie
+
+// Task:   Get a single movie
+// Route:  GET /movies/:title
+// Access: Private
 export const getMovie = async (req: Request, res: Response) => {
     try {
         const { title } = req.params;
@@ -42,7 +50,9 @@ export const getMovie = async (req: Request, res: Response) => {
 };
 
 
-// GET a single movie randomly
+// Task:   Get a single movie randomly
+// Route:  GET /movies/randomMovie
+// Access: Private
 export const getRandomMovie = async (req: Request, res: Response) => {
     try {
         const randomMovie = await Movie.aggregate(
