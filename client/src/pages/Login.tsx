@@ -7,7 +7,7 @@ const Login = () => {
       className="min-h-screen bg-cover bg-no-repeat " 
       style={{ backgroundImage: `url(${bg_image})`}}
     >
-       <h1 className='text-white text-5xl font-bold text-center pt-20 pb-5'>
+       <h1 className='text-white text-5xl font-bold text-center pt-16 pb-7'>
           <span className='text-blue-600'>Str</span>
           aven
         </h1>
