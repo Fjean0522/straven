@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { protect } from '../middleware/authMiddleware';
+// import { protect } from '../middleware/authMiddleware';
 import { 
     getAllMovies, 
     getMoviesByCategory, 
@@ -11,16 +11,16 @@ import {
 const router: Router = express.Router();
 
 // GET all movies
-router.get('/', protect, getAllMovies);
+router.get('/', getAllMovies);
 
 // GET all movies of a specific category
-router.get('/category/:category', protect, getMoviesByCategory);
+router.get('/category/:category', getMoviesByCategory);
 
 // GET a single movie randomly
-router.get('/randomMovie', protect, getRandomMovie);
+router.get('/randomMovie', getRandomMovie);
 
 // GET a single movie
-router.get('/:title',protect, getMovie);
+router.get('/:title', getMovie);
 
 
 export default router;
