@@ -1,16 +1,16 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react'
 import bg_image from '../assets/bg_login_signup.png'
 
 
-const User = {
+const userRegister = {
   email: '',
   username: '',
-  password: '',
+  password: ''
 }
 
 const Signup = () => {
-  const [formData, setFormData] = useState(User)
+  const [formData, setFormData] = useState(userRegister)
   const navigate = useNavigate()
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
