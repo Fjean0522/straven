@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import bg_image from '../assets/bg_login_signup.png'
 
 const Login = () => {
@@ -20,7 +21,7 @@ const Login = () => {
                         Email:
                     </label>
                     <input
-                        className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-500"
+                        className="border rounded w-full py-3 px-3 text-gray-700 focus:outline-blue-500"
                         id="email"
                         type="email"
                         placeholder="Enter your email"
@@ -33,7 +34,7 @@ const Login = () => {
                         Password:
                     </label>
                     <input
-                        className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-blue-500"
+                        className="border rounded w-full py-3 px-3 text-gray-700 focus:outline-blue-500"
                         id="password"
                         type="password"
                         placeholder="Enter your password"
@@ -51,7 +52,7 @@ const Login = () => {
 
             <p className='text-xl pt-5'>
               Don't have an account? 
-              <span className='text-blue-600'> Sign up</span>
+              <Link to='/signup' className='text-blue-600'> Sign up</Link>
             </p>
         </div>
     </div>
