@@ -1,7 +1,48 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState, ChangeEvent, FormEvent } from 'react';
 import bg_image from '../assets/bg_login_signup.png'
 
+
+const User = {
+  email: '',
+  username: '',
+  password: '',
+}
+
 const Signup = () => {
+  const [formData, setFormData] = useState(User)
+  const navigate = useNavigate()
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Create new user when sign up form is submitted
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      // Redirect to the login page after successful signup
+      navigate('/login');
+    } catch (error) {
+      console.error('Error creating user:', error);
+    }
+  };
+
   return (
     <div 
       className="min-h-screen bg-cover bg-no-repeat " 
@@ -15,6 +56,7 @@ const Signup = () => {
         <div className='flex flex-col items-center text-white max-w-full'>
           <form
               className='flex flex-col items-center gap-7 bg-blue-900 bg-opacity-20 rounded-md p-12 md:w-1/2'
+              onSubmit={handleSubmit}
           >
             <div className="mb-4 md:w-3/4">
               <label className="block text-white text-lg font-bold mb-2" htmlFor="email">
@@ -26,6 +68,8 @@ const Signup = () => {
                 type="email"
                 placeholder="Email address"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -40,6 +84,8 @@ const Signup = () => {
                 type="text"
                 placeholder="Enter a username"
                 name="username"
+                value={formData.username}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -54,6 +100,8 @@ const Signup = () => {
                 type="password"
                 placeholder="Enter a password"
                 name="password"
+                value={formData.password}
+                onChange={handleChange}
                 required
               />
             </div>
