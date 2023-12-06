@@ -21,9 +21,11 @@ const Login = () => {
   // Create new user when sign up form is submitted
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    
+    const API_URL: string = import.meta.env.VITE_API_URL
 
     try {
-      const response = await fetch('http://localhost:3000/users/login', {
+      const response = await fetch(`${API_URL}/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
