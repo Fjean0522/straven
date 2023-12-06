@@ -9,7 +9,7 @@ const userLogin = {
 
 const Login = () => {
   const [formData, setFormData] = useState(userLogin)
-  // const navigate = useNavigate() 
+  const navigate = useNavigate() 
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -32,11 +32,16 @@ const Login = () => {
         credentials: 'include'
       });
 
-      const data = await response.json();
-      console.log(data);
+      if (response.ok) {
+        const data = await response.json();
+        
+        localStorage.setItem('user', JSON.stringify(data))
 
-      // Redirect to the home page after successful login
-      // navigate('/');
+        // Redirect to home page if login is successful 
+        window.location.reload()
+        
+      }
+
     } catch (error) {
       console.error('Login error:', error);
     }
