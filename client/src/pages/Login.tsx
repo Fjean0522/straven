@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useState, ChangeEvent, FormEvent } from 'react'
 import bg_image from '../assets/bg_login_signup.png'
 
@@ -9,7 +9,6 @@ const userLogin = {
 
 const Login = () => {
   const [formData, setFormData] = useState(userLogin)
-  const navigate = useNavigate() 
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
