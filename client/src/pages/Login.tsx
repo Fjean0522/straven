@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState, ChangeEvent, FormEvent } from 'react'
 import bg_image from '../assets/bg_login_signup.png'
 
@@ -9,6 +9,7 @@ const userLogin = {
 
 const Login = () => {
   const [formData, setFormData] = useState(userLogin)
+  // const navigate = useNavigate() 
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -28,13 +29,14 @@ const Login = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+        credentials: 'include'
       });
 
       const data = await response.json();
       console.log(data);
 
       // Redirect to the home page after successful login
-    //   navigate('/login');
+      // navigate('/');
     } catch (error) {
       console.error('Login error:', error);
     }
