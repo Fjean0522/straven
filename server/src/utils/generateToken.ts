@@ -11,7 +11,7 @@ const generateToken = (res: Response, userId: Types.ObjectId) => {
     res.cookie('jwt', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV !== 'development', // Sets to true in production for secure cookies (HTTPS)
-        sameSite: 'none',
+        sameSite: process.env.NODE_ENV === 'development' ? 'lax' : 'none',
         maxAge: daysToExpire * 24 * 60 * 60 * 1000  
     });
 };
