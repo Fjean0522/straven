@@ -17,12 +17,12 @@ const Signup = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+  }
 
   // Create new user when sign up form is submitted
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
       const response = await fetch('http://localhost:3000/users', {
@@ -31,17 +31,18 @@ const Signup = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-      });
+        credentials: 'include'
+      })
 
-      const data = await response.json();
-      console.log(data);
-
-      // Redirect to the login page after successful signup
-      navigate('/login');
+      // Redirect to login page if signup is successful
+      if (response.ok) {
+        navigate('/login')
+      }
+      
     } catch (error) {
-      console.error('Error creating user:', error);
+      console.error('Error creating user:', error)
     }
-  };
+  }
 
   return (
     <div 
