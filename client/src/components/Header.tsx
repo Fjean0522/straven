@@ -56,7 +56,7 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
               alt="Logout button" 
               className='w-6 h-6'
             />
-            Logout
+            Sign out
           </div>
 
           <Link to='/settings'>
