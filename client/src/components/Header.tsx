@@ -1,4 +1,5 @@
-import settings from '../assets/settings.png'
+import settings_btn from '../assets/settings.png'
+import logout_btn from '../assets/logout.png'
 import Dropdown from './Dropdown'
 import { Link } from 'react-router-dom'
 
@@ -23,13 +24,26 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
 
         <Dropdown />
         
-        <div className='items-center gap-2 hidden lg:flex' >
-          
+        <div className='hidden lg:items-center lg:gap-2 lg:flex'>
+          <div 
+            className='flex items-center gap-1 text-white text-lg font-semibold px-4 rounded-xl cursor-pointer hover:scale-105'
+            onClick={() => {
+              
+              
+            }}
+          >
+            <img 
+              src={logout_btn} 
+              alt="Logout button" 
+              className='w-6 h-6'
+            />
+            Logout
+          </div>
 
           <Link to='/settings'>
             <img 
-              src={settings} 
-              alt='Settings'
+              src={settings_btn} 
+              alt='Settings button'
               className='w-10 h-10 cursor-pointer hover:scale-105'
             />
           </Link>
