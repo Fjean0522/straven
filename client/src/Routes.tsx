@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Play from './pages/Play'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
+import Settings from './pages/Settings'
 
 const userAuthenticated = localStorage.getItem('user')
 
@@ -26,6 +27,11 @@ const Routes = () => {
         {
             path: '/',
             element: userAuthenticated ? <Home /> : <Login />
+        },
+
+        {
+            path: '/settings',
+            element: <Settings />
         },
 
         {
