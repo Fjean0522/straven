@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   // Create new user when sign up form is submitted
-  const handleSubmit = async (e: FormEvent) => {
+  const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
     
     try {
@@ -33,17 +33,17 @@ const Login = () => {
       });
 
       if (response.ok) {
-        const data = await response.json();
+        const data = await response.json()
         
         localStorage.setItem('user', JSON.stringify(data))
 
-        // Redirect to home page if login is successful 
+        // Will load to home page if login is successful 
         window.location.reload()
         
       }
 
     } catch (error) {
-      console.error('Login error:', error);
+      console.error('Login error:', error)
     }
   };  
 
@@ -60,7 +60,7 @@ const Login = () => {
         <div className='flex flex-col items-center text-white max-w-full'>
             <form
                 className='flex flex-col items-center gap-7 bg-blue-900 bg-opacity-20 rounded-md p-12 md:w-1/2'
-                onSubmit={handleSubmit}
+                onSubmit={handleLogin}
             >
                 <div className="mb-4 md:w-3/4">
                     <label className="block text-white text-lg font-bold mb-2" htmlFor="email">
