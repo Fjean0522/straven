@@ -1,13 +1,36 @@
+import menu from '../assets/hamburger_menu.png'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import menu from '../assets/hamburger_menu.png'
 import { Link } from 'react-router-dom'
+import { API_URL } from '../pages/Home'
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
 const Dropdown = () => {
+  const handleLogout = async () => {
+    try {
+      const response = await fetch(`${API_URL}/users/logout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+
+      if (response.ok) {
+        localStorage.removeItem('user')
+        
+        // Will load to login page
+        window.location.reload()
+      }
+
+    } catch (error) {
+      console.log(error)
+      
+    }
+  }
+
   return (
     <Menu as="div" className="relative inline-block text-left lg:hidden">
       <div>
@@ -47,15 +70,15 @@ const Dropdown = () => {
            
             <Menu.Item>
               {({ active }) => (
-                <button
-                  type="submit"
+                <div
                   className={classNames(
                     active ? 'bg-blue-500 text-white' : 'text-white',
                     'block w-full px-4 py-2 text-left text-sm'
                   )}
+                  onClick={handleLogout}
                 >
                   Sign out
-                </button>
+                </div>
               )}
             </Menu.Item>
           </div>
