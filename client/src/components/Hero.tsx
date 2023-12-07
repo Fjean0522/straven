@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Movie } from '../pages/Home'
 import { mediaDefault } from '../pages/Play'
+import { API_URL } from '../pages/Home'
 
 type BgImage = {
   backgroundImage: string,
@@ -21,8 +22,6 @@ const Hero = () => {
     backgroundRepeat: 'no-repeat',
   })
   
-  const API_URL: string = import.meta.env.VITE_API_URL
-
   // Fetch random movie to display
   useEffect(() => {
     fetch(`${API_URL}/movies/randomMovie`)

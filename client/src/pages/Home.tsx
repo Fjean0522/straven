@@ -16,13 +16,13 @@ export type Movie = {
   videoUrl: string
 }
 
+export const API_URL: string = import.meta.env.VITE_API_URL
+
 const Home = () => {
   const [movies, setMovies] = useState<Movie[]>([])
 
   // Get url parameter / endpoint
   const { movieCategory } = useParams<string>()
-  
-  const API_URL: string = import.meta.env.VITE_API_URL
 
   useEffect(() => {
     // Fetch movies by category if category is specified in url 

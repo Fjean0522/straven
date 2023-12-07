@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, ChangeEvent, FormEvent } from 'react'
+import { API_URL } from './Home'
 import bg_image from '../assets/bg_login_signup.png'
 
 const userLogin = {
@@ -21,8 +22,6 @@ const Login = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
-    const API_URL: string = import.meta.env.VITE_API_URL
-
     try {
       const response = await fetch(`${API_URL}/users/login`, {
         method: 'POST',

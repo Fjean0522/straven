@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Movie } from "./Home"
+import { API_URL } from "./Home"
 import { useParams } from "react-router-dom"
 import Header from "../components/Header"
 import MediaPlayer from '../components/MediaPlayer'
@@ -20,8 +21,6 @@ const Play = () => {
 
   // Get url parameter / endpoint
   const { title } = useParams<string>()
-
-  const API_URL: string = import.meta.env.VITE_API_URL
   
   // Fetch movie specified in the url
   useEffect(() => {
