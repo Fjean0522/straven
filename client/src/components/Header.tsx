@@ -26,7 +26,7 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
         <div className='items-center gap-2 hidden lg:flex' >
           
 
-          <Link to={'/settings'}>
+          <Link to='/settings'>
             <img 
               src={settings} 
               alt='Settings'
