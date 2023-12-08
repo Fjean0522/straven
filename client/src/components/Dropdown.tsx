@@ -1,7 +1,7 @@
 import menu from '../assets/hamburger_menu.png'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { API_URL } from '../pages/Home'
 
 function classNames(...classes: any) {
@@ -9,6 +9,8 @@ function classNames(...classes: any) {
 }
 
 const Dropdown = () => {
+  const navigate = useNavigate()
+
   const handleLogout = async () => {
     try {
       const response = await fetch(`${API_URL}/users/logout`, {
@@ -22,6 +24,7 @@ const Dropdown = () => {
         localStorage.removeItem('user')
         
         // Will load to login page
+        navigate('/')
         window.location.reload()
       }
 
@@ -32,7 +35,7 @@ const Dropdown = () => {
   }
 
   return (
-    <Menu as="div" className="relative inline-block text-left lg:hidden">
+    <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button>
           <img 

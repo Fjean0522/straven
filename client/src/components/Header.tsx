@@ -1,37 +1,11 @@
-import settings_btn from '../assets/settings.png'
-import logout_btn from '../assets/logout.png'
 import Dropdown from './Dropdown'
-import { Link, useNavigate } from 'react-router-dom'
-import { API_URL } from '../pages/Home'
+import { Link } from 'react-router-dom'
 
 type BgHeader = {
   bgOpacityClass?: string
 }
 
 const Header = ({ bgOpacityClass }: BgHeader) => {
-  const navigate = useNavigate()
-
-  const handleLogout = async () => {
-    try {
-      const response = await fetch(`${API_URL}/users/logout`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      })
-
-      if (response.ok) {
-        localStorage.removeItem('user')
-        
-        // Will load to login page
-        navigate('/')
-        window.location.reload()
-      }
-
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   return (
     <>
@@ -47,28 +21,6 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
         </div>
 
         <Dropdown />
-        
-        <div className='hidden lg:items-center lg:gap-2 lg:flex'>
-          <div 
-            className='flex items-center gap-1 text-white text-lg font-semibold px-4 rounded-xl cursor-pointer hover:scale-105'
-            onClick={handleLogout}
-          >
-            <img 
-              src={logout_btn} 
-              alt="Logout button" 
-              className='w-6 h-6'
-            />
-            Sign out
-          </div>
-
-          <Link to='/settings'>
-            <img 
-              src={settings_btn} 
-              alt='Settings button'
-              className='w-10 h-10 cursor-pointer hover:scale-105'
-            />
-          </Link>
-        </div>
       </nav>
     </>
   )
