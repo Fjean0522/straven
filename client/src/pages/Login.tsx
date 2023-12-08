@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState, ChangeEvent, FormEvent } from 'react'
 import { API_URL } from './Home'
 import bg_image from '../assets/bg_login_signup.png'
@@ -10,6 +10,7 @@ const userLogin = {
 
 const Login = () => {
   const [formData, setFormData] = useState(userLogin)
+  const navigate = useNavigate()
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -37,9 +38,9 @@ const Login = () => {
         
         localStorage.setItem('user', JSON.stringify(data))
 
-        // Will load to home page if login is successful 
+        // Will load to movies home page if login is successful 
+        navigate('/')
         window.location.reload()
-        
       }
 
     } catch (error) {
