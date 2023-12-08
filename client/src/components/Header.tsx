@@ -1,7 +1,7 @@
 import settings_btn from '../assets/settings.png'
 import logout_btn from '../assets/logout.png'
 import Dropdown from './Dropdown'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { API_URL } from '../pages/Home'
 
 type BgHeader = {
@@ -9,6 +9,8 @@ type BgHeader = {
 }
 
 const Header = ({ bgOpacityClass }: BgHeader) => {
+  const navigate = useNavigate()
+
   const handleLogout = async () => {
     try {
       const response = await fetch(`${API_URL}/users/logout`, {
@@ -22,12 +24,12 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
         localStorage.removeItem('user')
         
         // Will load to login page
+        navigate('/')
         window.location.reload()
       }
 
     } catch (error) {
       console.log(error)
-      
     }
   }
 
