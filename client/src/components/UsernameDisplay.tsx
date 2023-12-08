@@ -29,7 +29,7 @@ const UsernameDisplay = () => {
   }, [user])
 
   return (
-    <div className="text-white font-semibold md:text-lg">
+    <div className="text-white font-semibold pt-1 md:text-lg">
      {user}
     </div>
   )
