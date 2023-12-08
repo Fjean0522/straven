@@ -1,4 +1,5 @@
 import Dropdown from './Dropdown'
+import UsernameDisplay from './UsernameDisplay'
 import { Link } from 'react-router-dom'
 
 type BgHeader = {
@@ -19,8 +20,11 @@ const Header = ({ bgOpacityClass }: BgHeader) => {
             </h1>
           </Link>
         </div>
-
-        <Dropdown />
+        <div className='flex items-center gap-5'>
+          <UsernameDisplay />
+          <Dropdown />
+        </div>
+        
       </nav>
     </>
   )
