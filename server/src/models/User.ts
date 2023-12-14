@@ -26,10 +26,13 @@ const userSchema = new Schema<User>({
 
     password: {
         type: String,
-        required: true,
+        required: true
     },
 
-    watchList: [Movie]
+    watchList: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Movie'
+    }]
 
 }, { timestamps: true });
 
