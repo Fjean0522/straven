@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+import { Movie } from "./Movie";
 
 type Watchlist = {
     userId: string
-    movies: string[]
+    movies: Movie[]
 }
 
 const Schema = mongoose.Schema;
@@ -14,7 +15,7 @@ const watchListSchema = new Schema<Watchlist>({
     },
 
     movies: [{
-        type: String,
+        type: Movie,
         ref: 'Movie'
     }]
 });
