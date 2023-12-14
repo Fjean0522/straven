@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import * as bcrypt from 'bcrypt';
+import { Movie } from "./Movie";
 
 type User = {
     username: string
     email: string
     password: string
+    watchList: Movie[]
     matchPassword: (inputedPassword: string) => Promise<boolean>
 };
 
@@ -25,7 +27,9 @@ const userSchema = new Schema<User>({
     password: {
         type: String,
         required: true,
-    }
+    },
+
+    watchList: [Movie]
 
 }, { timestamps: true });
 
