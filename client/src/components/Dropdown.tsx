@@ -70,6 +70,20 @@ const Dropdown = () => {
                 </Link>
               )}
             </Menu.Item>
+
+            <Menu.Item>
+              {({ active }) => (
+                <Link
+                  to='/watchlist'
+                  className={classNames(
+                    active ? 'bg-blue-500 text-white' : 'text-white',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Watch List
+                </Link>
+              )}
+            </Menu.Item>
            
             <Menu.Item>
               {({ active }) => (
