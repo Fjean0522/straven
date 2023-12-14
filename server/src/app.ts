@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import movieRoutes from './routes/movieRoutes';  // import router as movieRoutes
 import userRoutes from './routes/userRoutes';  // import router as userRoutes
+import watchListRoutes from './routes/watchListRoutes';  // import router as watchListRoutes
 import { errorHandler, notFound } from './middleware/errorMiddleware';
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.use(cookieParser());
 // Routes
 app.use('/users', userRoutes);
 app.use('/movies', movieRoutes);
+app.use('/watchlist', watchListRoutes);
 
 
 // Error Middleware
