@@ -1,6 +1,13 @@
-import Watchlist from "../models/Watchlist";
 import asyncHandler from "express-async-handler";
 import { Request, Response } from "express";
+
+
+
+const getUserWatchlist = asyncHandler(async (req: Request, res: Response) => {
+  const userId = req.params.userId;
+
+  
+});
 
 
 // Task:   Add movie to watchlist
@@ -9,13 +16,7 @@ import { Request, Response } from "express";
 const addToWatchlist = asyncHandler(async (req: Request, res: Response) => {
     const { userId, movieId } =  req.body;
 
-    const watchlist = await Watchlist.findOneAndUpdate(
-      { userId },
-      { $addToSet: { movies: movieId } },
-      { new: true, upsert: true }
-    );
-
-    res.json(watchlist);
+    
 });
 
 
@@ -25,13 +26,7 @@ const addToWatchlist = asyncHandler(async (req: Request, res: Response) => {
 const removeFromWatchlist = asyncHandler(async (req: Request, res: Response) => {
     const { userId, movieId } =  req.body;
 
-    const watchlist = await Watchlist.findOneAndUpdate(
-      { userId },
-      { $pull: { movies: movieId } },
-      { new: true }
-    );
-
-    res.json(watchlist);
+    
 });
 
-export { addToWatchlist, removeFromWatchlist };
+export { getUserWatchlist, addToWatchlist, removeFromWatchlist };
