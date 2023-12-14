@@ -43,11 +43,13 @@ const addToWatchlist = asyncHandler(async (req: Request, res: Response) => {
 const removeFromWatchlist = asyncHandler(async (req: Request, res: Response) => {
   const userId = req.params.userId;
   const movieId = req.params.movieId;
-  
-  // Remove movie from the user's watchlist
-  await User.findByIdAndUpdate(userId, { $pull: { watchlist: { _id: movieId } } });
 
-  res.status(200).json({ message: 'Movie removed from watchlist' });
+  const movie = await Movie.findById(movieId);
+
+  // Remove movie from the user's watchlist
+  await User.findByIdAndUpdate(userId, { $pull: { watchList: movieId } });
+
+  res.status(200).json({ message: `${movie?.title} was removed from watchlist` });
 });
 
 export { getUserWatchlist, addToWatchlist, removeFromWatchlist };
