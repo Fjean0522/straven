@@ -5,7 +5,7 @@ import { Movie } from "../models/Movie";
 
 
 // Task:   Get user watchlist
-// Route:  GET /
+// Route:  GET /:userId
 // Access: Private
 const getUserWatchlist = asyncHandler(async (req: Request, res: Response) => {
   const userId = req.params.userId;

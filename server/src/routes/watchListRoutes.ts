@@ -3,9 +3,9 @@ import { getUserWatchlist, addToWatchlist, removeFromWatchlist } from '../contro
 
 const router: Router = express.Router();
 
-router.get('/', getUserWatchlist);
-router.post('/add', addToWatchlist);
-router.post('/remove', removeFromWatchlist);
+router.get('/:userId', getUserWatchlist);
+router.post('/add/:userId/:movieId', addToWatchlist);
+router.post('/remove/:userId/:movieId', removeFromWatchlist);
 
 
 export default router;
