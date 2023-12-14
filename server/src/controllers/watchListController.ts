@@ -16,7 +16,7 @@ const getUserWatchlist = asyncHandler(async (req: Request, res: Response) => {
   if (user) {
     const watchList = user.watchList;
 
-    res.status(200).json({ watchList });
+    res.status(200).json(watchList);
   }
 });
 
@@ -31,9 +31,9 @@ const addToWatchlist = asyncHandler(async (req: Request, res: Response) => {
   const movie = await Movie.findById(movieId);
 
   // Add the movie to the user's watchlist
-  await User.findByIdAndUpdate(userId, { $push: { watchlist: movie } });
+  await User.findByIdAndUpdate(userId, { $push: { watchList: movie } });
 
-  res.status(200).json({ message: 'Movie added to watchlist' });
+  res.status(200).json({ message: `${movie?.title} was added to the watchlist` });
 });
 
 
