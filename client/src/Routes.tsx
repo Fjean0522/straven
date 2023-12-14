@@ -4,6 +4,7 @@ import Play from './pages/Play'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Settings from './pages/Settings'
+import WatchList from './pages/WatchList'
 
 const userAuthenticated = localStorage.getItem('user')
 
@@ -32,6 +33,11 @@ const Routes = () => {
         {
             path: '/settings',
             element: <Settings />
+        },
+
+        {
+            path: '/watchlist',
+            element: <WatchList />
         },
 
         {
