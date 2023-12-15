@@ -30,7 +30,7 @@ const MediaDisplay = ({ movies }: moviesProp) => {
                   key={movie._id} 
                   >
                   <img 
-                    className='hover:border hover:border-blue-400 h-full w-full'
+                    className='hover:border hover:border-blue-400 rounded-md h-full w-full'
                     src={movie.imageUrl} 
                     alt={movie.title + 'Thumbnail'} 
                   />
