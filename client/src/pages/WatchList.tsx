@@ -1,8 +1,9 @@
 import Header from "../components/Header"
+import RemoveButton from "../components/RemoveButton"
 import { Movie } from '../pages/Home'
-import { API_URL } from "../pages/Home";
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from "react";
+import { API_URL } from "../pages/Home"
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from "react"
 
 
 
@@ -75,7 +76,7 @@ const WatchList = () => {
                           Play
                         </Link>
 
-                        <button></button>
+                        <RemoveButton userId={userId} movieId={movie._id} />
                       </div>
                     </div>
                   </div>
