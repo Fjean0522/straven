@@ -54,19 +54,31 @@ const WatchList = () => {
             >
               {
                 watchlist.map(movie => (
-                    <Link 
-                      to={`/play/${movie.title}`}
-                      className='text-white font-semibold text-base flex flex-col items-center gap-3 md:w-2/6 lg:w-2/6 mx-1 mt-6 
-                      hover:cursor-pointer md:mt-0 '
-                      key={movie._id} 
-                      >
-                      <img 
-                        className='rounded-md mt-16 hover:border hover:border-blue-400'
-                        src={movie.imageUrl} 
-                        alt={movie.title + 'Thumbnail'} 
-                      />
-                      <h1>{movie.title}</h1>
-                    </Link>
+                  <div 
+                    className='relative group text-white font-semibold text-base flex flex-col items-center gap-3 md:w-2/6 lg:w-2/6 mx-1 mt-6'
+                    key={movie._id} 
+                  >
+                    <img 
+                      className='rounded-md mt-16 transition-transform transform'
+                      src={movie.imageUrl} 
+                      alt={movie.title + 'Thumbnail'} 
+                    />
+                    <h1>{movie.title}</h1>
+
+                    <div className="overlay hidden absolute top-3 left-0 w-full h-full hover:flex flex-col items-center justify-center bg-black bg-opacity-70 group-hover:flex">
+                      
+                      <div className="buttons flex gap-2">
+                        <Link 
+                          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+                          to={`/play/${movie.title}`}
+                        >
+                          Play
+                        </Link>
+
+                        <button></button>
+                      </div>
+                    </div>
+                  </div>
                 ))
               }
             </div>
