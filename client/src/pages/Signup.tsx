@@ -4,7 +4,7 @@ import { API_URL } from './Home'
 import bg_image from '../assets/bg_login_signup.png'
 
 
-const userRegister = {
+ export const userRegister = {
   email: '',
   username: '',
   password: ''
