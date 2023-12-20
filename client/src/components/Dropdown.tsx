@@ -71,7 +71,7 @@ const Dropdown = () => {
               )}
             </Menu.Item>
 
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link
                   to='/watchlist'
@@ -83,7 +83,7 @@ const Dropdown = () => {
                   Watch List
                 </Link>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
            
             <Menu.Item>
               {({ active }) => (
