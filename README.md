@@ -43,5 +43,5 @@ Stream content in HD.
 * Open 2 terminals to run both the client and the server concurrently
 * Cd into the client directory in one of the terminals and run `npm run dev` to start the client
 * Cd into the server directory in the other terminal and run `npm start` to start the server
-  * Note: you will need your own dotenv files for the client **"VITE_API_URL"**, and the server **"DB_URI"**(MongoDB), \
+  * Note: you will need your own database, and dotenv files for the client **"VITE_API_URL"**, and the server **"DB_URI"**(MongoDB),
     and **"JWT_SECRET"**
