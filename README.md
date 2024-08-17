@@ -40,13 +40,8 @@ Stream content in HD.
 * Clone the repository to your local machine
 * Navigate to the project directory
 * Run `npm install` to install the necessary dependencies
-* Start the development server with `npm run dev`
-
-## Contributing
-Contributions to Straven are welcome! If you'd like to contribute to this project, please follow these steps:
-
-* Fork the repository
-* Create a new branch for your feature or bug fix
-* Make your changes and commit them with clear, concise commit messages
-* Push your changes to your forked repository
-* Submit a pull request to the main repository, explaining the changes you've made
+* Open 2 terminals to run both the client and the server concurrently
+* Cd into the client directory in one of the terminals and run `npm run dev` to start the client
+* Cd into the server directory in the other terminal and run `npm start` to start the server
+  * Note: You will need your own dotenv files for the client **"VITE_API_URL"**, and the server **"DB_URI"**(MongoDB), \
+    and **"JWT_SECRET"**
