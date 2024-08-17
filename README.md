@@ -1,7 +1,7 @@
 ![Straven Logo](./logo_readme.png)
 
 ## Overview
-Straven is a *Modern Streaming Platform* that allows users to Browse, and Stream a vast selection of Movies. With a *User-Friendly*, *Responsive*, and *Visually Engaging* interface, Straven aims to provide an *Immersive* entertainment experience.
+Straven is a modern streaming platform that allows users to browse, and stream a vast selection of movies. With a user-friendly, responsive, and visually engaging interface, Straven aims to provide an immersive entertainment experience.
 
 ## Technologies
 #### Straven is built using the following technologies:
@@ -43,5 +43,5 @@ Stream content in HD.
 * Open 2 terminals to run both the client and the server concurrently
 * Cd into the client directory in one of the terminals and run `npm run dev` to start the client
 * Cd into the server directory in the other terminal and run `npm start` to start the server
-  * Note: You will need your own dotenv files for the client **"VITE_API_URL"**, and the server **"DB_URI"**(MongoDB), \
+  * Note: you will need your own dotenv files for the client **"VITE_API_URL"**, and the server **"DB_URI"**(MongoDB), \
     and **"JWT_SECRET"**
