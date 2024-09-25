@@ -24,6 +24,8 @@ A minimal Node js framework for building RESTful APIs.
 * **Node JS**:  
 A cross-platform JavaScript runtime environment.
 
+<img src="./showcase_readme.png" style="width: 75%; height: auto;">
+
 ## Features
 * **Extensive Content Library**:  
 Access a vast collection of movies spanning various genres.
